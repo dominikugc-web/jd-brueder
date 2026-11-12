@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>JD Brüder – Fahrzeugaufbereitung &amp; Detailing in Puderbach, Westerwald</title>
-<meta name="description" content="Fahrzeugaufbereitung, Detailing, Folientechnik und Trockeneisreinigung von den Brüdern Jonathan und David Apelt in Puderbach im Westerwald. Pakete ab 55 €. Jetzt per WhatsApp oder Telefon anfragen.">
-<meta name="theme-color" content="#0d0d0d">
+<title>JD Brüder – Fahrzeugaufbereitung in Puderbach, Westerwald</title>
+<meta name="description" content="Fahrzeugaufbereitung, Folie, Veredelung und Trockeneisreinigung von den Brüdern Jonathan und David Apelt in Puderbach im Westerwald. Pakete ab 55 €. Anfrage per WhatsApp oder Telefon.">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="img/logo/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <meta property="og:title" content="JD Brüder – Fahrzeugaufbereitung im Westerwald">
-<meta property="og:description" content="Aufbereitung, Detailing, Folie, Veredelung und Trockeneis aus Puderbach. Anfrage per WhatsApp oder Telefon.">
+<meta property="og:description" content="Aufbereitung, Folie, Veredelung und Trockeneis aus Puderbach. Anfrage per WhatsApp oder Telefon.">
 <meta property="og:image" content="img/w/hero-scheinwerfer.webp">
 <meta property="og:locale" content="de_DE">
-<link rel="preload" href="fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -32,458 +32,459 @@
 </head>
 <body>
 <!--
-THESIS: Die Seite ist eine Pflegeserie. Jedes Angebot ist ein Etikett mit Inhalt, Dauer und Preis – statt Wix-Textwüste und versteckter Preisliste. Verweigert: Standard-Hero mit Slogan über Stockfoto und Icon-Kachelraster.
-OWN-WORLD: Matt-schwarzer Grund (#0d0d0d) wie eine Pflegeflasche; weiße Etiketten mit schwarzem Logo und doppelter Gold-Haarlinie (#B49759); Caslon Display für Namen und Preise, Archivo breit gesperrt für Etikettenangaben; Gold nur als Prägung.
-STORY: Besucher sieht eigene Arbeit (Scheinwerfer im Studiolicht), versteht „Aufbereitung im Westerwald“, findet Paket und Preis, sieht Vorher/Nachher, tippt WhatsApp oder Anruf.
-FIRST VIEWPORT: Vollflächiges eigenes Foto; unten links ein weißes Etikett mit Logo, H1, einem Satz und den Buttons WhatsApp (Gold) und Anrufen; Fußzeile des Etiketts mit Ort und EST. 2022.
-FORM: Pflegeprodukt-Etikettenserie, Platz 5 der eigenen Liste, Seed 70807593.
+THESIS: Übersicht zuerst. Wer die Seite öffnet, sieht in drei Schritten, was JD Brüder macht, was es kostet und wie man sie erreicht. Verweigert: lange dunkle Scroll-Strecke mit verteilten Preisblöcken.
+OWN-WORLD: Weiß und Schwarz aus dem Markenhandbuch, Gold nur für den WhatsApp-Button und Akzente auf Schwarz. Inter für alles; Instrument Serif kursiv nur für die zweite Zeile einer Überschrift und für Preise.
+STORY: Sehen (eigenes Foto, Leistungen im Überblick) – vergleichen (Preise in Reitern) – vertrauen (Vorher/Nachher, zwei Brüder) – schreiben (WhatsApp/Anruf).
+FIRST VIEWPORT: Links Logo, H1 „Fahrzeugaufbereitung / im Westerwald“, ein Satz, Buttons WhatsApp (Gold) und Anrufen, drei Fakten; rechts das Scheinwerfer-Foto. Handy: Foto oben, Text darunter.
+FORM: Nutzervorgabe (Inter + Instrument Serif italic, „übersichtlich“), ersetzt Etikettenserie Seed 70807593.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-<a class="skip" href="#leistungen">Zum Inhalt springen</a>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="JD Brüder – zum Seitenanfang">
-      <span class="brand-name">JD Brüder</span>
-    </a>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#preise">Preise</a>
-      <a href="#vorher-nachher">Vorher/Nachher</a>
-      <a href="#trockeneis">Trockeneis</a>
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-logo" href="#top">JD Brüder</a>
+    <nav class="site-nav" aria-label="Hauptmenü">
+      <button class="menu-button" type="button" popovertarget="site-menu" aria-controls="site-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        Menü
+      </button>
+      <ul id="site-menu" class="site-menu" popover="auto">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#arbeiten">Vorher/Nachher</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </nav>
-    <a class="top-call num" href="tel:+4926849572269">02684 9572269</a>
+    <a class="btn btn-line header-call num" href="tel:+4926849572269">02684 9572269</a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- ===== Erster Eindruck ===== -->
+  <!-- Erster Eindruck -->
   <section class="hero" aria-labelledby="h1">
-    <div class="hero-photo">
-      <img src="img/w/hero-scheinwerfer.webp" alt="Schwarzer Sportwagen mit Wasserperlen auf dem frisch versiegelten Lack, Scheinwerfer im Studiolicht" width="2000" height="1338" fetchpriority="high">
-    </div>
-    <div class="wrap">
-      <div class="label hero-label">
-        <img class="logo" src="img/logo/logo-quer.webp" alt="JD Brüder – Logo mit Krone und Diamant, EST. 2022" width="900" height="630">
-        <h1 id="h1">Fahrzeugaufbereitung im Westerwald</h1>
-        <p>Aufbereitung, Detailing, Folie und Trockeneis – von zwei Brüdern mit Liebe zum Detail. Schreiben Sie uns, wir melden uns schnell zurück.</p>
-        <div class="hero-actions">
-          <a class="btn btn-wa" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
+    <div class="wrap hero-grid">
+      <div class="hero-photo">
+        <img src="img/w/hero-scheinwerfer.webp" alt="Schwarzer Sportwagen mit Wasserperlen auf dem versiegelten Lack, Scheinwerfer im Werkstattlicht" width="2000" height="1338" fetchpriority="high">
+      </div>
+      <div>
+        <img class="logo" src="img/logo/logo-quer.webp" alt="JD Brüder, Logo mit Krone und Diamant, gegründet 2022" width="900" height="630">
+        <h1 id="h1">Fahrzeug&shy;aufbereitung <span class="accent">im Westerwald</span></h1>
+        <p class="lead">Aufbereitung, Folie, Veredelung und Trockeneis – von zwei Brüdern aus Puderbach, mit Liebe zum Detail.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-            WhatsApp<span class="hide-sm"> schreiben</span>
+            Per WhatsApp anfragen
           </a>
-          <a class="btn btn-call" href="tel:+4926849572269">
+          <a class="btn btn-line" href="tel:+4926849572269">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
             Anrufen
           </a>
         </div>
-        <div class="hero-meta">
-          <span class="spec">Puderbach · Westerwald</span>
-          <span class="spec">Est. 2022</span>
-        </div>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Pakete ab 55 €</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Auf der Held 14, Puderbach</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg>Anfrage per WhatsApp</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== Pakete ===== -->
-  <section id="leistungen" aria-labelledby="h-pakete">
+  <!-- Leistungen im Überblick -->
+  <section id="leistungen" class="section stone" aria-labelledby="h-leistungen">
+    <div class="wrap" id="inhalt">
+      <div class="section-head">
+        <h2 id="h-leistungen">Was wir machen <span class="accent">für Ihr Auto</span></h2>
+        <p class="lead">Vier Bereiche, ein Ansprechpartner. Tippen Sie auf einen Bereich, um direkt zu den Preisen zu springen.</p>
+      </div>
+      <div class="services">
+        <a class="service" href="#preise" data-tab="tab-pakete">
+          <div class="service-img"><img src="img/w/polieren-s.webp" alt="" width="720" height="900" loading="lazy"></div>
+          <div class="service-body">
+            <h3>Aufbereitung</h3>
+            <p>Handwäsche, Innenraum, Politur und Versiegelung – als Paket oder einzeln.</p>
+            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">55 €</span></span><span class="go">Zu den Preisen</span></div>
+          </div>
+        </a>
+        <a class="service" href="#preise" data-tab="tab-folie">
+          <div class="service-img"><img src="img/w/folieren-scheinwerfer-s.webp" alt="" width="675" height="900" loading="lazy"></div>
+          <div class="service-body">
+            <h3>Folie</h3>
+            <p>Scheibentönung, Voll- und Teilfolierung, Steinschlagschutz.</p>
+            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">220 €</span></span><span class="go">Zu den Preisen</span></div>
+          </div>
+        </a>
+        <a class="service" href="#preise" data-tab="tab-folie">
+          <div class="service-img"><img src="img/w/ambiente-mittelkonsole-s.webp" alt="" width="900" height="600" loading="lazy"></div>
+          <div class="service-body">
+            <h3>Veredelung</h3>
+            <p>Ambiente- und Unterbodenlicht, Sternenhimmel, Interior folieren.</p>
+            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">250 €</span></span><span class="go">Zu den Preisen</span></div>
+          </div>
+        </a>
+        <a class="service" href="#preise" data-tab="tab-eis">
+          <div class="service-img service-type"><span>Trockeneis</span></div>
+          <div class="service-body">
+            <h3>Trockeneis&shy;reinigung</h3>
+            <p>Ohne Wasser und Chemie: Motorraum, Unterboden, Fassaden, Maschinen.</p>
+            <div class="service-price"><span class="accent">auf Anfrage</span><span class="go">Zu den Preisen</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preise -->
+  <section id="preise" class="section" aria-labelledby="h-preise">
     <div class="wrap">
-      <div class="sec-head" id="preise">
-        <h2 id="h-pakete">Unsere Pakete</h2>
-        <div>
-          <p class="lead">Vom schnellen Waschgang bis zum zweitägigen High End Detailing. Jedes Paket baut auf dem vorherigen auf – tippen Sie ein Paket an, um zu sehen, was drin ist.</p>
-          <hr class="rule">
+      <div class="section-head">
+        <h2 id="h-preise">Preise <span class="accent">auf einen Blick</span></h2>
+        <p class="lead">Richtpreise inkl. MwSt. Der genaue Preis hängt vom Zustand Ihres Fahrzeugs ab – schicken Sie uns gern Fotos.</p>
+      </div>
+
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-label="Preisbereiche">
+          <button type="button" role="tab" id="tab-pakete" aria-selected="true" tabindex="0">Pakete</button>
+          <button type="button" role="tab" id="tab-einzeln" aria-selected="false" tabindex="-1">Einzelleistungen</button>
+          <button type="button" role="tab" id="tab-folie" aria-selected="false" tabindex="-1">Folie &amp; Veredelung</button>
+          <button type="button" role="tab" id="tab-eis" aria-selected="false" tabindex="-1">Trockeneis</button>
         </div>
-      </div>
 
-      <div class="series">
-        <details class="pkg">
-          <summary>
-            <span class="pkg-name">Basic</span>
-            <span class="pkg-price num">399 €</span>
-            <span class="pkg-meta spec">ca. 8–10 Std.</span>
-            <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-          </summary>
-          <div class="pkg-body">
-            <ul>
-              <li>Handwäsche</li>
-              <li>Reinigung der Felgen und Radkästen</li>
-              <li>Reinigung der Glasflächen und Kunststoffe</li>
-              <li>Kunststoffpflege außen und innen</li>
-              <li>Innenraumreinigung</li>
-              <li>Reinigung mit Lackreinigungsknete</li>
-              <li>Einstufige Hochglanzpolitur</li>
-              <li>Langzeitversiegelung nach Ihrer Wahl</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="pkg">
-          <summary>
-            <span class="pkg-name">Premium</span>
-            <span class="pkg-price num">880 €</span>
-            <span class="pkg-meta spec">ca. 15–17 Std.</span>
-            <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-          </summary>
-          <div class="pkg-body">
-            <div>
-              <p class="inherit spec">Alles aus Basic, dazu:</p>
-              <ul>
-                <li>Lederreinigung und Lederpflege</li>
-                <li>Reifen- und Gummipflege</li>
-                <li>Zweistufige Hochglanzpolitur</li>
-                <li>PremiumClass Carnauba-Care Wachs für mehr Glanz</li>
-              </ul>
+        <div class="panels">
+          <!-- Pakete -->
+          <div role="tabpanel" aria-labelledby="tab-pakete" id="panel-pakete" tabindex="0">
+            <div class="pkgs">
+              <details class="pkg">
+                <summary>
+                  <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Basic</span>
+                  <span class="pkg-dur">ca. 8–10 Std.</span>
+                  <span class="pkg-price"><span class="accent num">399 €</span></span>
+                </summary>
+                <div class="pkg-body">
+                  <ul>
+                    <li>Handwäsche</li>
+                    <li>Reinigung der Felgen und Radkästen</li>
+                    <li>Reinigung der Glasflächen und Kunststoffe</li>
+                    <li>Kunststoffpflege außen und innen</li>
+                    <li>Innenraumreinigung</li>
+                    <li>Reinigung mit Lackreinigungsknete</li>
+                    <li>Einstufige Hochglanzpolitur</li>
+                    <li>Langzeitversiegelung nach Ihrer Wahl</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="pkg">
+                <summary>
+                  <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Premium</span>
+                  <span class="pkg-dur">ca. 15–17 Std.</span>
+                  <span class="pkg-price"><span class="accent num">880 €</span></span>
+                </summary>
+                <div class="pkg-body">
+                  <p class="inherit">Alles aus Basic, dazu:</p>
+                  <ul>
+                    <li>Lederreinigung und Lederpflege</li>
+                    <li>Reifen- und Gummipflege</li>
+                    <li>Zweistufige Hochglanzpolitur</li>
+                    <li>PremiumClass Carnauba-Care Wachs für mehr Glanz</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="pkg">
+                <summary>
+                  <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Luxus</span>
+                  <span class="pkg-dur">ca. 20–22 Std.</span>
+                  <span class="pkg-price"><span class="accent num">1.500 €</span></span>
+                </summary>
+                <div class="pkg-body">
+                  <p class="inherit">Alles aus Premium, dazu:</p>
+                  <ul>
+                    <li>PROFILINE Hybridcoating CC One</li>
+                    <li>Hochglanz-Poliervorgang für maximalen Glanz</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="pkg">
+                <summary>
+                  <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Exklusiv</span>
+                  <span class="pkg-dur">ca. 40 Std. und mehr</span>
+                  <span class="pkg-price"><span class="accent num">2.200 €</span></span>
+                </summary>
+                <div class="pkg-body">
+                  <p class="inherit">Alles aus Luxus, dazu:</p>
+                  <ul>
+                    <li>Felgendemontage und keramische Beschichtung der Felgen</li>
+                    <li>Labocosmetica Keramikversiegelung</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="pkg">
+                <summary>
+                  <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>High End Detailing</span>
+                  <span class="pkg-dur">ca. 48 Std. und mehr</span>
+                  <span class="pkg-price"><span class="accent">auf Anfrage</span></span>
+                </summary>
+                <div class="pkg-body">
+                  <p class="inherit">Alles aus Luxus, dazu:</p>
+                  <ul>
+                    <li>Motorraumaufbereitung</li>
+                    <li>Scheinwerferaufbereitung und Versiegelung</li>
+                    <li>Scheibenaufbereitung und Versiegelung</li>
+                  </ul>
+                  <p class="addon">Wir sehen uns Ihr Fahrzeug vorher an und nennen Ihnen dann einen festen Preis.</p>
+                </div>
+              </details>
             </div>
-          </div>
-        </details>
 
-        <details class="pkg">
-          <summary>
-            <span class="pkg-name">Luxus</span>
-            <span class="pkg-price num">1.500 €</span>
-            <span class="pkg-meta spec">ca. 20–22 Std.</span>
-            <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-          </summary>
-          <div class="pkg-body">
-            <div>
-              <p class="inherit spec">Alles aus Premium, dazu:</p>
-              <ul>
-                <li>PROFILINE Hybridcoating CC One</li>
-                <li>Hochglanz-Poliervorgang für maximalen Glanz</li>
-              </ul>
-            </div>
-          </div>
-        </details>
-
-        <details class="pkg">
-          <summary>
-            <span class="pkg-name">Exklusiv</span>
-            <span class="pkg-price num">2.200 €</span>
-            <span class="pkg-meta spec">ca. 40 Std. und mehr</span>
-            <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-          </summary>
-          <div class="pkg-body">
-            <div>
-              <p class="inherit spec">Alles aus Luxus, dazu:</p>
-              <ul>
-                <li>Felgendemontage und keramische Beschichtung der Felgen</li>
-                <li>Labocosmetica Keramikversiegelung</li>
-              </ul>
-            </div>
-          </div>
-        </details>
-
-        <details class="pkg">
-          <summary>
-            <span class="pkg-name">High End Detailing</span>
-            <span class="pkg-price"><small>Preis</small>auf Anfrage</span>
-            <span class="pkg-meta spec">ca. 48 Std. und mehr</span>
-            <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-          </summary>
-          <div class="pkg-body">
-            <div>
-              <p class="inherit spec">Alles aus Luxus, dazu:</p>
-              <ul>
-                <li>Motorraumaufbereitung</li>
-                <li>Scheinwerferaufbereitung und Versiegelung</li>
-                <li>Scheibenaufbereitung und Versiegelung</li>
-              </ul>
-            </div>
-            <div class="note"><p>Wir schauen uns Ihr Fahrzeug vorher an und nennen Ihnen dann einen festen Preis.</p></div>
-          </div>
-        </details>
-      </div>
-
-      <div class="series-group">
-        <h3>Schnell und gezielt</h3>
-        <div class="series">
-          <details class="pkg">
-            <summary>
-              <span class="pkg-name">Ganz nach Wunsch</span>
-              <span class="pkg-price num"><small>ab</small>55 €</span>
-              <span class="pkg-meta spec">ab ca. 1 Std.</span>
-              <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-            </summary>
-            <div class="pkg-body">
-              <p>Sie sagen uns, was Ihnen wichtig ist und was Sie ausgeben möchten – wir stellen die passende Pflege zusammen.</p>
-            </div>
-          </details>
-
-          <details class="pkg">
-            <summary>
-              <span class="pkg-name">Schnelle Wäsche</span>
-              <span class="pkg-price num"><small>ab</small>165 €</span>
-              <span class="pkg-meta spec">ca. 3 Std.</span>
-              <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-            </summary>
-            <div class="pkg-body">
-              <ul>
-                <li>Schonende Handwäsche</li>
-                <li>Felgenreinigung</li>
-                <li>Scheibenreinigung</li>
-                <li>Innenraum saugen</li>
-              </ul>
-              <div class="note">
-                <p>Fleckenentfernung auf Sitzen ist in diesem Paket nicht enthalten.</p>
+            <div class="pkg-group">
+              <h3>Schnell und gezielt</h3>
+              <div class="pkgs">
+                <details class="pkg">
+                  <summary>
+                    <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Ganz nach Wunsch</span>
+                    <span class="pkg-dur">ab ca. 1 Std.</span>
+                    <span class="pkg-price"><small>ab</small><span class="accent num">55 €</span></span>
+                  </summary>
+                  <div class="pkg-body"><p>Sie sagen uns, was Ihnen wichtig ist und was Sie ausgeben möchten – wir stellen die passende Pflege zusammen.</p></div>
+                </details>
+                <details class="pkg">
+                  <summary>
+                    <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Schnelle Wäsche</span>
+                    <span class="pkg-dur">ca. 3 Std.</span>
+                    <span class="pkg-price"><small>ab</small><span class="accent num">165 €</span></span>
+                  </summary>
+                  <div class="pkg-body">
+                    <ul>
+                      <li>Schonende Handwäsche</li>
+                      <li>Felgenreinigung</li>
+                      <li>Scheibenreinigung</li>
+                      <li>Innenraum saugen</li>
+                    </ul>
+                    <p class="addon">Fleckenentfernung auf Sitzen ist in diesem Paket nicht enthalten.</p>
+                  </div>
+                </details>
+                <details class="pkg">
+                  <summary>
+                    <span class="pkg-title"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Leasingrückläufer</span>
+                    <span class="pkg-dur">ca. 8 Std.</span>
+                    <span class="pkg-price"><span class="accent num">399 €</span></span>
+                  </summary>
+                  <div class="pkg-body">
+                    <ul>
+                      <li>Handwäsche</li>
+                      <li>Reinigung der Glasflächen und Kunststoffe</li>
+                      <li>Innenraumreinigung</li>
+                      <li>Kunststoffpflege außen und innen</li>
+                      <li>Reinigung mit Lackreinigungsknete</li>
+                      <li>Einstufige Politur</li>
+                    </ul>
+                    <p class="addon">Zubuchbar: Lederreinigung + 105 €, Polsterreinigung + 135 € (je nach Verschmutzung), Hundehaare entfernen + 75 €.</p>
+                  </div>
+                </details>
               </div>
             </div>
-          </details>
+            <p class="price-note">Für Bus, SUV oder Transporter kommen 50 bis 100 € dazu. Der Endpreis hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab.</p>
+          </div>
 
-          <details class="pkg">
-            <summary>
-              <span class="pkg-name">Leasingrückläufer</span>
-              <span class="pkg-price num">399 €</span>
-              <span class="pkg-meta spec">ca. 8 Std.</span>
-              <span class="pkg-toggle spec">Inhalt <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></span>
-            </summary>
-            <div class="pkg-body">
-              <ul>
-                <li>Handwäsche</li>
-                <li>Reinigung der Glasflächen und Kunststoffe</li>
-                <li>Innenraumreinigung</li>
-                <li>Kunststoffpflege außen und innen</li>
-                <li>Reinigung mit Lackreinigungsknete</li>
-                <li>Einstufige Politur</li>
-              </ul>
-              <div class="note">
-                <p><strong>Zubuchbar:</strong> Lederreinigung + 105 € · Polsterreinigung + 135 € (je nach Verschmutzung) · Hundehaare entfernen + 75 €</p>
-              </div>
+          <!-- Einzelleistungen -->
+          <div role="tabpanel" aria-labelledby="tab-einzeln" id="panel-einzeln" tabindex="0" hidden>
+            <div class="pricegrid">
+              <table class="pricetable num">
+                <caption>Wäsche und Innenraum</caption>
+                <tbody>
+                  <tr><th scope="row">Handwäsche Kleinwagen</th><td>55 €</td></tr>
+                  <tr><th scope="row">Handwäsche Mittel- und Oberklasse</th><td>85 €</td></tr>
+                  <tr><th scope="row">Handwäsche SUV und Van</th><td>85 €</td></tr>
+                  <tr><th scope="row">Reinigung Teilledersitze</th><td>55 €</td></tr>
+                  <tr><th scope="row">Reinigung und Pflege Ledersitze</th><td>40 €</td></tr>
+                  <tr><th scope="row">Reinigung Stoffsitze</th><td>ab 45 €</td></tr>
+                </tbody>
+              </table>
+              <table class="pricetable num">
+                <caption>Scheiben und Felgen</caption>
+                <tbody>
+                  <tr><th scope="row">Scheiben und Spiegel Kleinwagen</th><td>25 €</td></tr>
+                  <tr><th scope="row">Scheiben und Spiegel Mittel- und Oberklasse</th><td>35 €</td></tr>
+                  <tr><th scope="row">Scheiben und Spiegel SUV und Van</th><td>45 €</td></tr>
+                  <tr><th scope="row">Felgenreinigung</th><td>25 €</td></tr>
+                </tbody>
+              </table>
             </div>
-          </details>
-        </div>
-      </div>
+          </div>
 
-      <p class="series-note">Alle Preise sind Richtpreise inkl. MwSt. Für Bus, SUV oder Transporter kommen 50 bis 100 € dazu. Der Endpreis hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab – wir sagen ihn Ihnen vorher.</p>
-    </div>
-  </section>
+          <!-- Folie & Veredelung -->
+          <div role="tabpanel" aria-labelledby="tab-folie" id="panel-folie" tabindex="0" hidden>
+            <div class="pricegrid">
+              <table class="pricetable num">
+                <caption>Folie</caption>
+                <tbody>
+                  <tr><th scope="row">Scheibentönung</th><td>ab 220 €</td></tr>
+                  <tr><th scope="row">Voll- und Teilfolierung</th><td>ab 260 €</td></tr>
+                  <tr><th scope="row">Steinschlagschutzfolie</th><td>ab 500 €</td></tr>
+                </tbody>
+              </table>
+              <table class="pricetable num">
+                <caption>Veredelung</caption>
+                <tbody>
+                  <tr><th scope="row">Interior folieren</th><td>ab 250 €</td></tr>
+                  <tr><th scope="row">Unterbodenbeleuchtung</th><td>ab 350 €</td></tr>
+                  <tr><th scope="row">Ambientebeleuchtung</th><td>ab 650 €</td></tr>
+                  <tr><th scope="row">Sternenhimmel</th><td>ab 1.100 €</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="price-note">Außerdem: Autoglas, Autoteile, Klimaservice, Öl- und Filterwechsel, Rad- und Reifenwechsel – fragen Sie einfach an.</p>
+          </div>
 
-  <!-- ===== Einzelleistungen, Folie, Veredeln ===== -->
-  <section aria-labelledby="h-einzeln" style="padding-top:0">
-    <div class="wrap twocol">
-      <div class="col-left">
-      <div class="label pricelist">
-        <h3 id="h-einzeln">Einzelleistungen</h3>
-        <table class="num">
-          <tbody>
-            <tr><th scope="row">Handwäsche Kleinwagen</th><td>55 €</td></tr>
-            <tr><th scope="row">Handwäsche Mittel- und Oberklasse</th><td>85 €</td></tr>
-            <tr><th scope="row">Handwäsche SUV und Van</th><td>85 €</td></tr>
-            <tr><th scope="row">Reinigung Teilledersitze</th><td>55 €</td></tr>
-            <tr><th scope="row">Reinigung und Pflege Ledersitze</th><td>40 €</td></tr>
-            <tr><th scope="row">Reinigung Stoffsitze</th><td>ab 45 €</td></tr>
-            <tr><th scope="row">Scheiben und Spiegel Kleinwagen</th><td>25 €</td></tr>
-            <tr><th scope="row">Scheiben und Spiegel Mittel- und Oberklasse</th><td>35 €</td></tr>
-            <tr><th scope="row">Scheiben und Spiegel SUV und Van</th><td>45 €</td></tr>
-            <tr><th scope="row">Felgenreinigung</th><td>25 €</td></tr>
-          </tbody>
-          <caption>Richtpreise inkl. MwSt., je nach Zustand des Fahrzeugs.</caption>
-        </table>
-      </div>
-        <div class="extra">
-          <h3>Auto-Service</h3>
-          <p style="color:var(--muted)">Autoglas, Autoteile, Klimaservice, Öl- und Filterwechsel, Rad- und Reifenwechsel. Fragen Sie einfach an.</p>
-        </div>
-<img class="photo left-photo" src="img/w/folieren-scheinwerfer-s.webp" alt="Folie wird mit der Hand auf einen Scheinwerfer gelegt, darüber die Wabenleuchten der Werkstatt" width="675" height="900" loading="lazy">
-      </div>
-
-      <div class="extras">
-        <div class="extra">
-          <h3>Folientechnik</h3>
-          <dl class="num">
-            <div><dt>Scheibentönung</dt><dd>ab 220 €</dd></div>
-            <div><dt>Voll- und Teilfolierung</dt><dd>ab 260 €</dd></div>
-            <div><dt>Steinschlagschutzfolie</dt><dd>ab 500 €</dd></div>
-          </dl>
-        </div>
-        <div class="extra">
-          <h3>Veredeln</h3>
-          <dl class="num">
-            <div><dt>Interior folieren</dt><dd>ab 250 €</dd></div>
-            <div><dt>Unterbodenbeleuchtung</dt><dd>ab 350 €</dd></div>
-            <div><dt>Ambientebeleuchtung</dt><dd>ab 650 €</dd></div>
-            <div><dt>Sternenhimmel</dt><dd>ab 1.100 €</dd></div>
-          </dl>
-          <img class="photo" src="img/w/ambiente-mittelkonsole-s.webp" alt="Blaue Ambientebeleuchtung an der Mittelkonsole eines BMW" width="900" height="600" loading="lazy">
+          <!-- Trockeneis -->
+          <div role="tabpanel" aria-labelledby="tab-eis" id="panel-eis" tabindex="0" hidden>
+            <div class="ice">
+              <div>
+                <h3>Trockeneisreinigung mit Dry Ice Energy</h3>
+                <p class="muted" style="margin-top:.8rem">Trockeneis ist gefrorenes CO₂ mit rund −78,5&nbsp;°C. Beim Aufprall wird es sofort gasförmig: Der Schmutz löst sich, zurück bleibt kein Wasser und kein Strahlmittel. Wir reinigen damit Fahrzeuge, aber auch Fassaden, Holz und Maschinen.</p>
+                <p><strong>Preis auf Anfrage</strong> – je nach Fläche und Verschmutzung.</p>
+                <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20h%C3%A4tte%20eine%20Anfrage%20zur%20Trockeneisreinigung." target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
+                  Trockeneis anfragen
+                </a>
+              </div>
+              <ul class="checks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ohne Wasser und aggressive Chemie</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Schonend, kein Abtrag der Oberfläche</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Elektrisch nicht leitend</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Kein Ausbau der Teile nötig</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Innenraum, Unterboden, Motorraum</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Fassaden, Graffiti, Kleberreste</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Vorher / Nachher ===== -->
-  <section id="vorher-nachher" class="proof" aria-labelledby="h-proof">
+  <!-- Vorher / Nachher -->
+  <section id="arbeiten" class="section dark" aria-labelledby="h-arbeiten">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 id="h-proof">Vorher, nachher</h2>
-        <p class="lead">Echte Fahrzeuge aus unserer Werkstatt in Puderbach. Ziehen Sie den Regler über die Felge.</p>
+      <div class="section-head">
+        <h2 id="h-arbeiten">Vorher, nachher <span class="accent">aus unserer Werkstatt</span></h2>
+        <p class="lead">Echte Fahrzeuge, echte Ergebnisse. Ziehen Sie den Regler über die Felge.</p>
       </div>
-
-      <div class="proof-grid">
+      <div class="work">
         <figure class="compare">
-          <div class="compare-frame" style="--pos:50%">
-            <img src="img/w/felge-vorher-s.webp" alt="Felge vorher: verschmutzt und braun vom Bremsstaub" width="506" height="900" loading="lazy">
+          <div class="compare-frame">
+            <img src="img/w/felge-vorher-s.webp" alt="Felge vorher: braun von Bremsstaub und Schmutz" width="506" height="900" loading="lazy">
             <img class="after" src="img/w/felge-nachher-s.webp" alt="Dieselbe Felge nachher: sauber und silbern" width="506" height="900" loading="lazy">
             <span class="compare-line" aria-hidden="true"></span>
             <span class="compare-knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
             <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: links vorher, rechts nachher">
           </div>
-          <figcaption><strong>Felgenreinigung.</strong> Bremsstaub und Schmutz entfernt, Oberfläche geschützt.</figcaption>
+          <figcaption><strong>Felgenreinigung.</strong> Bremsstaub entfernt, Oberfläche geschützt.</figcaption>
         </figure>
-
         <figure class="still">
           <img src="img/w/motorhaube-5050-s.webp" alt="Motorhaube unter Wabenlicht: links matt mit Kratzern, rechts poliert und spiegelnd" width="900" height="600" loading="lazy">
-          <figcaption><strong>Politur, halb und halb.</strong> Links unbehandelt, rechts nach der Hochglanzpolitur – die Wabenleuchten spiegeln sich wieder scharf.</figcaption>
+          <figcaption><strong>Politur, halb und halb.</strong> Links vorher, rechts nach der Hochglanzpolitur.</figcaption>
         </figure>
-
         <figure class="still">
-          <img src="img/w/leder-vorher-nachher-2-s.webp" alt="Heller Ledersitz: vordere Hälfte gereinigt, hintere Hälfte noch dunkel verschmutzt" width="900" height="600" loading="lazy">
-          <figcaption><strong>Lederreinigung.</strong> Die gereinigte Hälfte zeigt die eigentliche Farbe des Leders.</figcaption>
+          <img src="img/w/leder-vorher-nachher-2-s.webp" alt="Heller Ledersitz: vordere Hälfte gereinigt, hintere Hälfte noch verschmutzt" width="900" height="600" loading="lazy">
+          <figcaption><strong>Lederreinigung.</strong> Die gereinigte Hälfte zeigt die echte Farbe des Leders.</figcaption>
         </figure>
+      </div>
+
+      <div class="gallery" data-gallery>
+        <a href="img/w/kuga.webp"><img src="img/w/kuga-s.webp" alt="Orangefarbener Ford Kuga mit glänzendem Lack nach der Aufbereitung" width="720" height="900" loading="lazy"></a>
+        <a href="img/w/abperleffekt.webp"><img src="img/w/abperleffekt-s.webp" alt="Wasser perlt auf versiegeltem Lack ab" width="900" height="601" loading="lazy"></a>
+        <a href="img/w/z4-cabrio.webp"><img src="img/w/z4-cabrio-s.webp" alt="BMW Z4 Cabrio mit hellbraunem Leder nach der Innenraumpflege" width="900" height="506" loading="lazy"></a>
+        <a href="img/w/tuer-innen.webp"><img src="img/w/tuer-innen-s.webp" alt="Türverkleidung mit braunem Leder und Carbon-Optik" width="602" height="900" loading="lazy"></a>
+      </div>
+      <p class="insta">Mehr Arbeiten auf Instagram: <a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></p>
+    </div>
+  </section>
+
+  <!-- Über uns + FAQ -->
+  <section id="ueber-uns" class="section" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="about">
+        <img src="img/w/trocknen-studio-s.webp" alt="Ein schwarzes Fahrzeug wird in der Werkstatt unter den Wabenleuchten von Hand getrocknet" width="675" height="900" loading="lazy">
+        <div>
+          <h2 id="h-about">Zwei Brüder, <span class="accent">eine Werkstatt</span></h2>
+          <p>Wir sind Jonathan und David Apelt. 2022 haben wir JD Brüder in Daufenbach gegründet, heute arbeiten wir in unserer Werkstatt in Puderbach – zu viert, mit zwei Mitarbeitern.</p>
+          <p>Ob Kleinwagen, Familien-SUV oder Liebhaberstück: Wir behandeln jedes Auto, als wäre es unser eigenes – mit Sorgfalt, Geduld und den richtigen Mitteln.</p>
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <h2>Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie erfahre ich den genauen Preis?</summary>
+            <p>Die Preise auf dieser Seite sind Richtwerte, denn der Aufwand hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab. Am einfachsten schicken Sie uns per WhatsApp ein paar Fotos Ihres Fahrzeugs, dann schätzen wir den Preis für Sie ein.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie oft sollte ein Auto aufbereitet werden?</summary>
+            <p>Viele Kunden kommen ein- bis zweimal im Jahr: im Frühjahr nach dem Streusalz und im Herbst vor dem Winter. Wir beraten Sie gern, was für Ihr Auto sinnvoll ist.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Was bringt eine Lackversiegelung?</summary>
+            <p>Sie schützt den Lack vor UV-Strahlung, Vogelkot, Insekten und Streusalz. Wasser und Schmutz perlen ab, das Auto bleibt länger sauber und lässt sich leichter waschen.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Lohnt sich eine Aufbereitung vor Verkauf oder Leasingrückgabe?</summary>
+            <p>Meistens ja. Gepflegter Lack und ein sauberer Innenraum sind das Erste, worauf Käufer und Gutachter schauen. Für die Rückgabe gibt es unser Paket „Leasingrückläufer“.</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Trockeneis ===== -->
-  <section id="trockeneis" aria-labelledby="h-ice">
-    <div class="wrap ice">
+  <!-- Kontakt -->
+  <section id="kontakt" class="section dark" aria-labelledby="h-kontakt">
+    <div class="wrap contact-grid">
       <div>
-        <h2 id="h-ice">Trockeneis&shy;reinigung</h2>
-        <p class="lead" style="margin-top:1.2rem">Wir reinigen mit Trockeneis von Dry Ice Energy – am Fahrzeug, aber auch an Fassaden, Holz und Maschinen.</p>
-        <p>Trockeneis ist gefrorenes CO₂ mit rund −78,5&nbsp;°C. Beim Aufprall wird es sofort gasförmig: Der Schmutz löst sich, und zurück bleibt kein Wasser und kein Strahlmittel.</p>
-        <ul>
-          <li>Ohne Wasser und aggressive Chemie</li>
-          <li>Schonend, kein Abtrag der Oberfläche</li>
-          <li>Elektrisch nicht leitend</li>
-          <li>Kein Ausbau der Teile nötig</li>
-          <li>Innenraum, Unterboden, Motorraum</li>
-          <li>Fassaden, Graffiti, Kleberreste</li>
-        </ul>
-        <div class="hero-actions on-dark">
-          <a class="btn btn-wa" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20h%C3%A4tte%20eine%20Anfrage%20zur%20Trockeneisreinigung." target="_blank" rel="noopener">
+        <h2 id="h-kontakt">Termin anfragen <span class="accent">per WhatsApp oder Telefon</span></h2>
+        <p class="lead">Schreiben Sie uns, was Sie sich wünschen, und schicken Sie gern ein paar Fotos mit. Wir melden uns bei Ihnen.</p>
+        <div class="actions" style="margin-top:1.8rem">
+          <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-            Trockeneis anfragen
+            Per WhatsApp anfragen
+          </a>
+          <a class="btn btn-line" href="tel:+4926849572269">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
+            Anrufen
           </a>
         </div>
-        <p class="series-note">Preis auf Anfrage – je nach Fläche und Verschmutzung.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== Galerie ===== -->
-  <section id="galerie" aria-labelledby="h-gal" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 id="h-gal">Aus der Werkstatt</h2>
-        <p class="lead">Mehr Arbeiten zeigen wir laufend auf Instagram unter <a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a>.</p>
-      </div>
-      <div class="gallery" data-gallery>
-        <a href="img/w/polieren.webp"><img src="img/w/polieren-s.webp" alt="Poliermaschine mit rotem Pad auf dem Lack" width="720" height="900" loading="lazy"></a>
-        <a href="img/w/kuga.webp"><img src="img/w/kuga-s.webp" alt="Orangefarbener Ford Kuga mit glänzendem Lack nach der Aufbereitung" width="720" height="900" loading="lazy"></a>
-        <a href="img/w/abperleffekt.webp"><img src="img/w/abperleffekt-s.webp" alt="Wasser perlt auf versiegeltem Lack ab, daneben ein Mikrofasertuch" width="900" height="601" loading="lazy"></a>
-        <a href="img/w/tuer-innen.webp"><img src="img/w/tuer-innen-s.webp" alt="Türverkleidung mit braunem Leder und Carbon-Optik" width="602" height="900" loading="lazy"></a>
-        <a href="img/w/z4-cabrio.webp"><img src="img/w/z4-cabrio-s.webp" alt="BMW Z4 Cabrio mit hellbraunem Leder nach der Innenraumpflege" width="900" height="506" loading="lazy"></a>
-        <a href="img/w/polieren-flex.webp"><img src="img/w/polieren-flex-s.webp" alt="Exzenterpolierer im Einsatz auf einer Motorhaube" width="720" height="900" loading="lazy"></a>
-        <a href="img/w/ambiente-tuer.webp"><img src="img/w/ambiente-tuer-s.webp" alt="Blaue Ambientebeleuchtung in der Türverkleidung" width="900" height="600" loading="lazy"></a>
-        <a href="img/w/cockpit.webp"><img src="img/w/cockpit-s.webp" alt="Sauberes Cockpit eines BMW mit digitalem Tacho" width="900" height="602" loading="lazy"></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Über uns ===== -->
-  <section id="ueber-uns" aria-labelledby="h-about" style="padding-top:0">
-    <div class="wrap about">
-      <img src="img/w/trocknen-studio-s.webp" alt="Ein schwarzes Fahrzeug wird in der Werkstatt unter den Wabenleuchten von Hand getrocknet" width="675" height="900" loading="lazy">
-      <div>
-        <h2 id="h-about">Zwei Brüder, eine Werkstatt</h2>
-        <p>Wir sind Jonathan und David Apelt. 2022 haben wir JD Brüder in Daufenbach gegründet, heute arbeiten wir in unserer Werkstatt in Puderbach – zu viert, mit zwei Mitarbeitern.</p>
-        <p>Wir sind echte Liebhaber mit einem Gespür für Fahrzeuge. Ob Kleinwagen, Familien-SUV oder Liebhaberstück: Wir behandeln jedes Auto so, als wäre es unser eigenes – mit Sorgfalt, Geduld und den richtigen Mitteln.</p>
-        <p style="color:var(--muted)">Qualität und Professionalität – dafür stehen wir mit unserem Namen.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section aria-labelledby="h-faq" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head"><h2 id="h-faq">Häufige Fragen</h2></div>
-      <div class="faq">
-        <details>
-          <summary>Wie oft sollte ein Auto aufbereitet werden?<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
-          <div><p>Das hängt davon ab, wie Sie fahren und wo das Auto steht. Viele Kunden kommen ein- bis zweimal im Jahr, gern im Frühjahr nach dem Streusalz und im Herbst vor dem Winter. Wir beraten Sie gern.</p></div>
-        </details>
-        <details>
-          <summary>Was bringt eine Lackversiegelung?<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
-          <div><p>Sie legt eine Schutzschicht auf den Lack: gegen UV-Strahlung, Vogelkot, Insekten und Streusalz. Wasser und Schmutz perlen ab, das Auto bleibt länger sauber und lässt sich leichter waschen. Je nach Produkt hält sie mehrere Monate bis Jahre.</p></div>
-        </details>
-        <details>
-          <summary>Lohnt sich eine Aufbereitung vor dem Verkauf oder der Leasingrückgabe?<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
-          <div><p>Meistens ja. Ein gepflegter Lack und ein sauberer Innenraum sind das Erste, worauf Käufer und Gutachter schauen. Für die Rückgabe gibt es unser Paket „Leasingrückläufer“.</p></div>
-        </details>
-        <details>
-          <summary>Warum sollte man Leder pflegen?<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
-          <div><p>Ungepflegtes Leder trocknet aus, wird spröde und bekommt Risse. Reinigung und Pflege halten es weich, schützen vor Flecken und vor dem Ausbleichen durch die Sonne.</p></div>
-        </details>
-        <details>
-          <summary>Steht der Preis vorher fest?<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
-          <div><p>Die Preise auf dieser Seite sind Richtwerte. Den genauen Preis nennen wir Ihnen, bevor wir anfangen – am einfachsten schicken Sie uns per WhatsApp ein paar Fotos Ihres Fahrzeugs.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Kontakt ===== -->
-  <section id="kontakt" class="contact" aria-labelledby="h-kontakt" style="padding-top:0">
-    <div class="wrap">
-      <div class="label contact-label">
-        <div>
-          <h2 id="h-kontakt">Termin anfragen</h2>
-          <p>Am schnellsten geht es per WhatsApp: Schreiben Sie uns, was Sie sich wünschen, und schicken Sie gern ein paar Fotos mit.</p>
-          <div class="hero-actions">
-            <a class="btn btn-wa" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-              WhatsApp schreiben
-            </a>
-            <a class="btn btn-call" href="tel:+4926849572269">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
-              Anrufen
-            </a>
-          </div>
-        </div>
-        <dl class="contact-list">
-          <div><dt class="spec">Telefon und WhatsApp</dt><dd class="num"><a href="tel:+4926849572269">02684 9572269</a></dd></div>
-          <div><dt class="spec">Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Auf+der+Held+14+56305+Puderbach" target="_blank" rel="noopener">Auf der Held 14<br>56305 Puderbach</a></dd></div>
-          <div><dt class="spec">E-Mail</dt><dd><a href="mailto:jd.brueder@gmail.com">jd.brueder@gmail.com</a></dd></div>
-          <div><dt class="spec">Instagram</dt><dd><a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></dd></div>
-        </dl>
-      </div>
+      <dl class="contact-list">
+        <div><dt>Telefon und WhatsApp</dt><dd class="num"><a href="tel:+4926849572269">02684 9572269</a></dd></div>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Auf+der+Held+14+56305+Puderbach" target="_blank" rel="noopener">Auf der Held 14, 56305 Puderbach</a></dd></div>
+        <div><dt>E-Mail</dt><dd><a href="mailto:jd.brueder@gmail.com">jd.brueder@gmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></dd></div>
+      </dl>
     </div>
   </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <span>© <span class="num">2026</span> JD Brüder GbR · Puderbach, Westerwald</span>
+    <span>© <span class="num">2026</span> JD Brüder GbR, Puderbach</span>
     <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
 
 <div class="dock" aria-label="Schnellkontakt">
-  <a class="btn btn-wa" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
+  <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
     WhatsApp
   </a>
-  <a class="btn btn-call" href="tel:+4926849572269">
+  <a class="btn btn-line" href="tel:+4926849572269">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
     Anrufen
   </a>
 </div>
 
 <dialog class="lightbox" aria-label="Bild vergrößert">
-  <button type="button" aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  <button type="button" aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
   <figure style="margin:0"></figure>
 </dialog>
 
