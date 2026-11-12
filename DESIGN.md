@@ -13,6 +13,12 @@ colors:
   text-inv-2: "#b3b2ad"
   gold: "#b49759"
   gold-hover: "#c7ab6e"
+  dash: "#a3a39f"
+  row-alt: "#fafaf9"
+  bubble-me: "#e7f6dc"
+  status-closed: "#8a8a86"
+  status-open-text: "#9fe0a6"
+  status-open-dot: "#4cc35a"
 typography:
   sans: "Inter (variable, self-hosted) – all text"
   accent: "Instrument Serif Italic (self-hosted) – accents only"
@@ -27,6 +33,8 @@ rounded:
   card: "10px"
   pill: "999px (buttons, menu button)"
   focus: "4px"
+  chat: "18px (chat card)"
+  bubble: "14px (chat bubbles)"
 motion:
   ease: "cubic-bezier(.22, 1, .36, 1)"
   durations: "0.2s colour changes, 0.3s accordion height, 0.4s dock, 0.6s image zoom on hover"
@@ -38,7 +46,7 @@ This replaces the earlier "Etikettenserie" (black ground, Caslon, label cards). 
 
 ## Principles
 
-1. **Overview first.** The page runs hero → four service cards → prices in tabs → before/after → about + FAQ → contact. Nothing else.
+1. **Overview first.** The page runs hero → four service cards → prices in tabs → how it works (Ablauf) → before/after → about + FAQ → contact. Nothing else.
 2. **Light by default, black for emphasis.** White and stone carry the content. Black is reserved for the before/after section, the contact block and the footer. The brand manual targets about 45 % white and 40 % black.
 3. **Gold is for action.** It appears on the WhatsApp button (gold fill, black text, 7.5:1) and on the "Trockeneis" card face. Never use gold text on white.
 4. **One accent face, two uses only.** Instrument Serif Italic appears in two places:
@@ -95,6 +103,14 @@ Headings use `font-size-adjust: from-font`, so the serif accent line matches Int
 **Gallery**: four square tiles (2×2 on mobile, 4×1 on desktop) with a native `<dialog>` lightbox.
 
 **Mobile dock**: a fixed WhatsApp + Anrufen bar under 761px. It appears once the hero has left the viewport. `scroll-padding-bottom` keeps anchored content clear of it.
+
+**Package comparison** (`.compare-table` in `.compare-wrap`): Basic–Exklusiv as columns (name, accent price, duration), services as rows with check / dash; dash and check carry hidden text ("enthalten" / "nicht enthalten"). Wrapper scrolls horizontally on phones (`position: relative` so hidden labels stay clipped), first column sticky, hint line "Tabelle seitlich wischen" under 761px. Other packages (High End, Ganz nach Wunsch, Schnelle Wäsche, Leasingrückläufer) stay as `details.pkg` rows under "Weitere Pakete".
+
+**Steps** (`ol.steps`): numbered black circles – only for the real four-step sequence (photos → estimate → pick-up or drop-off → return).
+
+**Chat preview** (`figure.chat`): example WhatsApp exchange, always captioned as an example, with the gold "Fotos per WhatsApp schicken" button.
+
+**Opening state** (`[data-open-state]`): Mo–Fr 8–17 Uhr evaluated in Europe/Berlin; shows "Jetzt geöffnet" (green dot) or "Jetzt geschlossen". Public holidays are not handled.
 
 ## Do / Don't
 

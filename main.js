@@ -68,3 +68,16 @@ if (dock && hero && 'IntersectionObserver' in window) {
 } else if (dock) {
   dock.classList.add('show');
 }
+
+// Öffnungszeiten: Mo–Fr 8–17 Uhr (deutsche Zeit)
+const state = document.querySelector('[data-open-state]');
+if (state) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Berlin', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false,
+  }).formatToParts(new Date()).map((p) => [p.type, p.value]));
+  const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+  const open = !['Sat', 'Sun'].includes(parts.weekday) && minutes >= 8 * 60 && minutes < 17 * 60;
+  state.textContent = open ? 'Jetzt geöffnet' : 'Jetzt geschlossen';
+  state.classList.toggle('is-open', open);
+  state.hidden = false;
+}
