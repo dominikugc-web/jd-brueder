@@ -290,7 +290,7 @@ Confident, compact, letterspaced; two variants only.
 
 - No oversized gold statistic: facts such as the dry-ice temperature sit in running copy. Do not reintroduce a hero-metric numeral.
 - An opened package renders its contents as a white label (paper ground, double gold hairline inset 7px); the "Alles aus …, dazu" line is ink with a gold underline rule, never small gold on white.
-- The header carries the "JD Brüder" Caslon wordmark only; the full logo appears once, on the hero label (hidden under 561px, where the header wordmark carries the brand).
+- The header carries the "JD Brüder" Caslon wordmark only; the full logo appears once, on the hero label (6.5rem wide under 561px).
 - Focus rings inside white labels switch to ink (#111) for ≥3:1 contrast.
 - Gallery: 8 sharp own shots, uniform 4:5 tiles, no frames with baked-in watermarks.
 - Vehicle-size surcharge (Bus/SUV/Transporter + 50–100 €) is stated once under the package list.
