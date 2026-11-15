@@ -44,18 +44,18 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 ## Principles
 
 1. **Phone first, short page.** Hero → four service tiles → before/after → four steps → about + FAQ → contact. Prices live inside the sheets, not on the page. The page shrank from about 12 to about 7 phone screens.
-2. **One strong image.** The hero shows one car, half neglected and half detailed, split by a thin gold line. Nothing else on the page competes with it.
-3. **The gold line is the motif.** The same gold line divides the before/after slider. Gold otherwise marks action (primary buttons) and prices.
+2. **One strong image.** The hero is a real photo from the hall: the car under the hexagon lights, framed so the workbench side is visible. Nothing else on the page competes with it.
+3. **Gold marks action and prices.** Primary buttons, prices and the dividing line of the before/after slider. Nothing else.
 4. **Black is black.** Page ground is #000000, surfaces are #111111 with a 1px #262626 line. No gradients as decoration, no glow, no shadows on tiles.
 5. **One accent face, two uses only.** Instrument Serif Italic for the second line of h1/h2 (in gold) and for prices. Never in body text, buttons, navigation or labels.
 6. **No invented claims.** Prices are "ab"/Richtpreise. No reviews, guarantees or promises the owners have not confirmed.
-7. **Real photos prove the work.** Only the hero is an AI illustration (stated in the Impressum). Tiles, sheets, before/after and gallery use the workshop's own photos.
+7. **Real photos only.** Every image is the workshop's own photo. The hero was tidied with AI (boxes removed, door closed, sharpened), which the Impressum states; the plate logo comes from the original photo.
 
 ## Components
 
-**Header**: sticky, black at 82 % with blur. Gold wordmark left. On phones a round call button and the "Menü" button (native `popover`); from 900px inline links and a phone pill.
+**Header**: sticky, black at 82 % with blur. Gold wordmark left. On phones a round call button and the "Menü" button (native `popover`); from 1100px inline links and a phone pill.
 
-**Hero**: phone: image cropped to 10:9 from the top, fading into black, headline overlapping the fade, two full-width buttons (WhatsApp in gold, "Leistungen und Preise" as outline). From 900px the wide image fills the section and the text sits on the dark left third. Images: `img/w/hero-mobil.webp` (4:5) and `img/w/hero-desktop.webp` (16:9).
+**Hero**: phone: photo cropped to 10:9 with the car on the left and the workbench side on the right, the floor fading into black, headline overlapping the fade, two full-width buttons (WhatsApp in gold, "Leistungen und Preise" as outline). From 640px the full 16:9 photo sits on top. From 1100px the text stands left on black and the photo fills the right 64 %, shifted to show the workbench side and fading into black on its left edge. Images: `img/w/hero-halle-mobil.webp` (10:9) and `img/w/hero-halle.webp` (16:9).
 
 **Service tile** (`button.tile`): fixed 2×2 grid on phones, 4×1 from 900px, ratio 4:5. Photo, dark gradient from the bottom, name, "ab" price in the gold accent face, a small plus badge as the tap cue. "Trockeneis" has no own photo and shows a gold ice crystal instead. A tap opens the matching sheet (`data-sheet`).
 
