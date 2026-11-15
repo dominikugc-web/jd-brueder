@@ -13,7 +13,6 @@ colors:
   white: "#ffffff"
   whatsapp: "#1da851"
   sheet-handle: "#3d3d3d"
-  dash: "#6f6f6b"
   status-closed: "#8a8a86"
   status-open-text: "#9fe0a6"
   status-open-dot: "#4cc35a"
@@ -26,7 +25,7 @@ typography:
   body: "1.0625rem / 1.6, weight 400"
   lead: "clamp(1.05rem, 1.5vw, 1.2rem), text-2"
   wordmark: "Inter 700, 1rem, uppercase, 0.14em tracking, gold"
-  price: "Instrument Serif Italic in gold: 1.45rem on tiles, 1.8–1.9rem in package rows and the comparison table"
+  price: "Instrument Serif Italic in gold: 1.45rem on tiles, 1.8rem in package rows"
 rounded:
   card: "14px (tiles, photos, panels)"
   small: "10px (gallery thumbs, menu items, logo plate)"
@@ -64,9 +63,9 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 
 **Segmented control** (`.tablist`): "Pakete" / "Einzelleistungen" inside the Aufbereitung sheet. Selected segment is light with black text; arrow, Home and End keys work.
 
-**Package comparison** (`.compare-table`): Basic to Exklusiv as columns. Fixed layout with a narrow sticky first column so two packages are visible on a phone; the hint to swipe stands above the table. Check and dash carry hidden text.
+**Package row** (`details.pkg`): Basic, Premium, Luxus and Exklusiv stand below each other with name, duration and price. Each row opens to show what it adds to the package before ("Alles aus Basic, dazu:"); Basic is open by default. There is no comparison table and nothing scrolls sideways (owner request after testing on the phone, 15 Nov 2026).
 
-**Package row** (`details.pkg`), **price table** (`.pricetable`): as before, now on dark with gold prices.
+**Price table** (`.pricetable`): as before, now on dark with gold prices.
 
 **Before/after slider**: gold line and gold knob, "Vorher" and "Nachher" tags in the corners, transparent range input on top for touch and keyboard.
 
