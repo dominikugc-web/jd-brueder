@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>JD Brüder – Fahrzeugaufbereitung in Puderbach, Westerwald</title>
+<title>JD Brüder | Fahrzeugaufbereitung in Puderbach, Westerwald</title>
 <meta name="description" content="Fahrzeugaufbereitung, Folie, Veredelung und Trockeneisreinigung von den Brüdern Jonathan und David Apelt in Puderbach im Westerwald. Pakete ab 55 €. Anfrage per WhatsApp oder Telefon.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="img/logo/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
-<meta property="og:title" content="JD Brüder – Fahrzeugaufbereitung im Westerwald">
+<meta property="og:title" content="JD Brüder | Fahrzeugaufbereitung im Westerwald">
 <meta property="og:description" content="Aufbereitung, Folie, Veredelung und Trockeneis aus Puderbach. Anfrage per WhatsApp oder Telefon.">
-<meta property="og:image" content="img/w/hero-scheinwerfer.webp">
+<meta property="og:image" content="img/w/hero-desktop.webp">
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -32,12 +32,11 @@
 </head>
 <body>
 <!--
-THESIS: Übersicht zuerst. Wer die Seite öffnet, sieht in drei Schritten, was JD Brüder macht, was es kostet und wie man sie erreicht. Verweigert: lange dunkle Scroll-Strecke mit verteilten Preisblöcken.
-OWN-WORLD: Weiß und Schwarz aus dem Markenhandbuch, Gold nur für den WhatsApp-Button und Akzente auf Schwarz. Inter für alles; Instrument Serif kursiv nur für die zweite Zeile einer Überschrift und für Preise.
-STORY: Sehen (eigenes Foto, Leistungen im Überblick) – vergleichen (Preise in Reitern) – vertrauen (Vorher/Nachher, zwei Brüder) – schreiben (WhatsApp/Anruf).
-FIRST VIEWPORT: Links Logo, H1 „Fahrzeugaufbereitung / im Westerwald“, ein Satz, Buttons WhatsApp (Gold) und Anrufen, drei Fakten; rechts das Scheinwerfer-Foto. Handy: Foto oben, Text darunter.
-FORM: Nutzervorgabe (Inter + Instrument Serif italic, „übersichtlich“), ersetzt Etikettenserie Seed 70807593.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+AUFBAU: Zuerst fürs Handy. Kopfbild (halb verschmutzt, halb aufbereitet) > vier feste Kacheln > Vorher/Nachher > Ablauf > Über uns und Fragen > Kontakt.
+KACHELN: Ein Tipp öffnet ein Fenster von unten mit Foto, zwei Sätzen, Preisen und WhatsApp-Knopf. So bleibt die Startseite kurz.
+BILDER: Nur das Kopfbild ist eine KI-Illustration (im Impressum genannt). Alle anderen Fotos stammen aus der Werkstatt.
+KONTAKT: Runder WhatsApp-Knopf unten rechts, sobald die Knöpfe im Kopfbereich aus dem Bild sind.
+Regeln und Farben stehen in DESIGN.md.
 -->
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
@@ -50,112 +49,218 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         Menü
       </button>
       <ul id="site-menu" class="site-menu" popover="auto">
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#preise">Preise</a></li>
-        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#leistungen">Leistungen und Preise</a></li>
         <li><a href="#arbeiten">Vorher/Nachher</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
         <li><a href="#ueber-uns">Über uns</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a class="btn btn-line header-call num" href="tel:+4926849572269">02684 9572269</a>
+    <a class="btn btn-line header-call num" href="tel:+4926849572269" aria-label="Anrufen: 02684 9572269"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg><span>02684 9572269</span></a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- Erster Eindruck -->
+  <!-- Erster Bildschirm -->
   <section class="hero" aria-labelledby="h1">
-    <div class="wrap hero-grid">
-      <div class="hero-photo">
-        <img src="img/w/hero-scheinwerfer.webp" alt="Schwarzer Sportwagen mit Wasserperlen auf dem versiegelten Lack, Scheinwerfer im Werkstattlicht" width="2000" height="1338" fetchpriority="high">
-      </div>
-      <div>
-        <img class="logo" src="img/logo/logo-quer.webp" alt="JD Brüder, Logo mit Krone und Diamant, gegründet 2022" width="900" height="630">
-        <h1 id="h1">Ihr Auto wie neu. <span class="accent">Wir holen es sogar ab.</span></h1>
-        <p class="lead">Fahrzeugaufbereitung im Westerwald: Fotos per WhatsApp schicken, Preis einschätzen lassen – wir holen Ihr Auto ab und bringen es sauber zurück.</p>
-        <div class="actions">
-          <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-            Per WhatsApp anfragen
-          </a>
-          <a class="btn btn-line" href="tel:+4926849572269">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
-            Anrufen
-          </a>
-        </div>
-        <ul class="facts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V7h11v9M14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Hol- und Bringservice</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/></svg>Trockeneis ohne Chemie</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/></svg>Familienbetrieb aus Puderbach</li>
-        </ul>
+    <picture class="hero-media">
+      <source media="(min-width: 900px)" srcset="img/w/hero-desktop.webp" width="1920" height="1072">
+      <img src="img/w/hero-mobil.webp" alt="Schwarze Limousine unter Wabenlicht: linke Hälfte verschmutzt und matt, rechte Hälfte aufbereitet und glänzend (Illustration)" width="1080" height="1340" fetchpriority="high">
+    </picture>
+    <div class="wrap hero-text">
+      <h1 id="h1">Ihr Auto wie neu. <span class="accent">Wir holen es sogar ab.</span></h1>
+      <p class="lead">Fahrzeugaufbereitung in Puderbach im Westerwald. Fotos per WhatsApp schicken, Preis erfahren, Auto abholen lassen.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Per WhatsApp anfragen</a>
+        <a class="btn btn-line" href="#leistungen">Leistungen und Preise</a>
       </div>
     </div>
   </section>
 
-  <!-- Leistungen im Überblick -->
-  <section id="leistungen" class="section stone" aria-labelledby="h-leistungen">
+  <!-- Leistungen: vier feste Kacheln -->
+  <section id="leistungen" class="section" aria-labelledby="h-leistungen">
     <div class="wrap" id="inhalt">
       <div class="section-head">
         <h2 id="h-leistungen">Was wir machen <span class="accent">für Ihr Auto</span></h2>
-        <p class="lead">Vier Bereiche, ein Ansprechpartner. Tippen Sie auf einen Bereich, um direkt zu den Preisen zu springen.</p>
+        <p class="lead">Tippen Sie auf einen Bereich. Dann sehen Sie Details und Preise.</p>
       </div>
-      <div class="services">
-        <a class="service" href="#preise" data-tab="tab-pakete">
-          <div class="service-img"><img src="img/w/polieren-s.webp" alt="" width="720" height="900" loading="lazy"></div>
-          <div class="service-body">
-            <h3>Aufbereitung</h3>
-            <p>Handwäsche, Innenraum, Politur und Versiegelung – als Paket oder einzeln.</p>
-            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">55 €</span></span><span class="go">Zu den Preisen</span></div>
-          </div>
-        </a>
-        <a class="service" href="#preise" data-tab="tab-folie">
-          <div class="service-img"><img src="img/w/folieren-scheinwerfer-s.webp" alt="" width="675" height="900" loading="lazy"></div>
-          <div class="service-body">
-            <h3>Folie</h3>
-            <p>Scheibentönung, Voll- und Teilfolierung, Steinschlagschutz.</p>
-            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">220 €</span></span><span class="go">Zu den Preisen</span></div>
-          </div>
-        </a>
-        <a class="service" href="#preise" data-tab="tab-folie">
-          <div class="service-img"><img src="img/w/ambiente-mittelkonsole-s.webp" alt="" width="900" height="600" loading="lazy"></div>
-          <div class="service-body">
-            <h3>Veredelung</h3>
-            <p>Ambiente- und Unterbodenlicht, Sternenhimmel, Interior folieren.</p>
-            <div class="service-price"><span><span class="muted">ab</span> <span class="accent num">250 €</span></span><span class="go">Zu den Preisen</span></div>
-          </div>
-        </a>
-        <a class="service" href="#preise" data-tab="tab-eis">
-          <div class="service-img service-type"><span>Trockeneis</span></div>
-          <div class="service-body">
-            <h3>Trockeneis&shy;reinigung</h3>
-            <p>Ohne Wasser und Chemie: Motorraum, Unterboden, Fassaden, Maschinen.</p>
-            <div class="service-price"><span class="accent">auf Anfrage</span><span class="go">Zu den Preisen</span></div>
-          </div>
-        </a>
+      <div class="tiles">
+        <button class="tile" type="button" data-sheet="sheet-aufbereitung">
+          <img src="img/w/polieren-s.webp" alt="" loading="lazy">
+          <span class="tile-more" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span>
+          <span class="tile-name">Aufbereitung</span>
+          <span class="tile-price num">ab 55 €</span>
+          <span class="sr">, Details und Preise öffnen</span>
+        </button>
+        <button class="tile" type="button" data-sheet="sheet-folie">
+          <img src="img/w/folieren-scheinwerfer-s.webp" alt="" loading="lazy">
+          <span class="tile-more" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span>
+          <span class="tile-name">Folie</span>
+          <span class="tile-price num">ab 220 €</span>
+          <span class="sr">, Details und Preise öffnen</span>
+        </button>
+        <button class="tile" type="button" data-sheet="sheet-veredelung">
+          <img src="img/w/ambiente-mittelkonsole-s.webp" alt="" loading="lazy">
+          <span class="tile-more" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span>
+          <span class="tile-name">Veredelung</span>
+          <span class="tile-price num">ab 250 €</span>
+          <span class="sr">, Details und Preise öffnen</span>
+        </button>
+        <button class="tile" type="button" data-sheet="sheet-eis">
+          <span class="tile-art"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5v19M3.8 7.25l16.4 9.5M3.8 16.75l16.4-9.5"/><path d="M9.8 4.2 12 6.4l2.2-2.2M9.8 19.8 12 17.6l2.2 2.2M4.2 10.9l3-.8-.8-3M19.8 13.1l-3 .8.8 3M4.2 13.1l3 .8-.8 3M19.8 10.9l-3-.8.8-3"/></svg></span>
+          <span class="tile-more" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span>
+          <span class="tile-name">Trockeneis</span>
+          <span class="tile-price num">auf Anfrage</span>
+          <span class="sr">, Details und Preise öffnen</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Preise -->
-  <section id="preise" class="section" aria-labelledby="h-preise">
+  <!-- Vorher / Nachher -->
+  <section id="arbeiten" class="section" aria-labelledby="h-arbeiten">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="h-preise">Preise <span class="accent">auf einen Blick</span></h2>
-        <p class="lead">Richtpreise inkl. MwSt. Der genaue Preis hängt vom Zustand Ihres Fahrzeugs ab – schicken Sie uns gern Fotos.</p>
+        <h2 id="h-arbeiten">Vorher, nachher <span class="accent">aus unserer Werkstatt</span></h2>
+        <p class="lead">Echte Fahrzeuge, echte Ergebnisse. Ziehen Sie den Regler über die Felge.</p>
+      </div>
+      <div class="work">
+        <figure class="compare">
+          <div class="compare-frame">
+            <img src="img/w/felge-vorher-s.webp" alt="Felge vorher: braun von Bremsstaub und Schmutz" width="506" height="900" loading="lazy">
+            <img class="after" src="img/w/felge-nachher-s.webp" alt="Dieselbe Felge nachher: sauber und silbern" width="506" height="900" loading="lazy">
+            <span class="compare-tag before" aria-hidden="true">Vorher</span>
+            <span class="compare-tag after-tag" aria-hidden="true">Nachher</span>
+            <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: links vorher, rechts nachher">
+          </div>
+          <figcaption><strong>Felgenreinigung.</strong> Bremsstaub entfernt, Oberfläche geschützt.</figcaption>
+        </figure>
+        <div>
+          <div class="gallery" data-gallery>
+          <a href="img/w/motorhaube-5050.webp"><img src="img/w/motorhaube-5050-s.webp" alt="Politur, halb und halb: Motorhaube links matt mit Kratzern, rechts poliert und spiegelnd" loading="lazy"></a>
+          <a href="img/w/leder-vorher-nachher-2.webp"><img src="img/w/leder-vorher-nachher-2-s.webp" alt="Lederreinigung: vordere Hälfte des hellen Ledersitzes gereinigt, hintere Hälfte noch verschmutzt" loading="lazy"></a>
+          <a href="img/w/kuga.webp"><img src="img/w/kuga-s.webp" alt="Orangefarbener Ford Kuga mit glänzendem Lack nach der Aufbereitung" loading="lazy"></a>
+          <a href="img/w/abperleffekt.webp"><img src="img/w/abperleffekt-s.webp" alt="Wasser perlt auf versiegeltem Lack ab" loading="lazy"></a>
+          <a href="img/w/z4-cabrio.webp"><img src="img/w/z4-cabrio-s.webp" alt="BMW Z4 Cabrio mit hellbraunem Leder nach der Innenraumpflege" loading="lazy"></a>
+          <a href="img/w/tuer-innen.webp"><img src="img/w/tuer-innen-s.webp" alt="Türverkleidung mit braunem Leder und Carbon-Optik" loading="lazy"></a>
+          </div>
+          <p class="insta">Tippen Sie auf ein Foto, um es groß zu sehen. Mehr Arbeiten auf Instagram: <a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- So läuft's -->
+  <section id="ablauf" class="section" aria-labelledby="h-ablauf">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="h-ablauf">So läuft’s <span class="accent">in vier Schritten</span></h2>
+      </div>
+        <ol class="steps">
+          <li><h3>Fotos per WhatsApp schicken</h3><p>Ein paar Bilder vom Lack, vom Innenraum und von dem, was Sie stört.</p></li>
+          <li><h3>Preis einschätzen lassen</h3><p>Wir sagen Ihnen, welches Paket passt und was es ungefähr kostet.</p></li>
+          <li><h3>Abholen lassen oder vorbeibringen</h3><p>Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab. Die Kosten dafür nennen wir Ihnen bei der Anfrage. Oder Sie bringen es nach Puderbach.</p></li>
+          <li><h3>Sauber zurückbekommen</h3><p>Wir bringen Ihr Auto zurück, oder Sie holen es bei uns ab.</p></li>
+        </ol>
+      <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20schicke%20Ihnen%20Fotos%20von%20meinem%20Auto." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Fotos per WhatsApp schicken</a>
+    </div>
+  </section>
+
+  <!-- Über uns + Fragen -->
+  <section id="ueber-uns" class="section" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="about">
+        <div class="about-photo">
+          <img src="img/w/trocknen-studio-s.webp" alt="Ein schwarzes Fahrzeug wird in der Werkstatt unter den Wabenleuchten von Hand getrocknet" width="675" height="900" loading="lazy">
+          <div class="logo-plate"><img src="img/logo/logo-quer.webp" alt="JD Brüder, Logo mit Krone und Diamant, gegründet 2022" width="900" height="630" loading="lazy"></div>
+        </div>
+        <div>
+          <h2 id="h-about">Zwei Brüder, <span class="accent">eine Werkstatt</span></h2>
+          <p>Wir sind Jonathan und David Apelt. 2022 haben wir JD Brüder in Daufenbach gegründet. Heute arbeiten wir in unserer Werkstatt in Puderbach, zu viert, mit zwei Mitarbeitern.</p>
+          <p>Ob Kleinwagen, Familien-SUV oder Liebhaberstück: Wir behandeln jedes Auto, als wäre es unser eigenes. Mit Sorgfalt, Geduld und den richtigen Mitteln.</p>
+        </div>
       </div>
 
-      <div class="tabs">
-        <div class="tablist" role="tablist" aria-label="Preisbereiche">
-          <button type="button" role="tab" id="tab-pakete" aria-selected="true" tabindex="0">Pakete</button>
-          <button type="button" role="tab" id="tab-einzeln" aria-selected="false" tabindex="-1">Einzelleistungen</button>
-          <button type="button" role="tab" id="tab-folie" aria-selected="false" tabindex="-1">Folie &amp; Veredelung</button>
-          <button type="button" role="tab" id="tab-eis" aria-selected="false" tabindex="-1">Trockeneis</button>
+      <div class="faq-block">
+        <h2>Häufige Fragen</h2>
+        <div class="faq">
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie erfahre ich den genauen Preis?</summary>
+            <p>Die Preise auf dieser Seite sind Richtwerte, denn der Aufwand hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab. Am einfachsten schicken Sie uns per WhatsApp ein paar Fotos Ihres Fahrzeugs, dann schätzen wir den Preis für Sie ein.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Holen Sie mein Auto auch ab?</summary>
+            <p>Ja. Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab und bringen es sauber zurück. Was das kostet, sagen wir Ihnen bei der Anfrage.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie oft sollte ein Auto aufbereitet werden?</summary>
+            <p>Viele Kunden kommen ein- bis zweimal im Jahr: im Frühjahr nach dem Streusalz und im Herbst vor dem Winter. Wir beraten Sie gern, was für Ihr Auto sinnvoll ist.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Was bringt eine Lackversiegelung?</summary>
+            <p>Sie schützt den Lack vor UV-Strahlung, Vogelkot, Insekten und Streusalz. Wasser und Schmutz perlen ab, das Auto bleibt länger sauber und lässt sich leichter waschen.</p>
+          </details>
+          <details>
+            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Lohnt sich eine Aufbereitung vor Verkauf oder Leasingrückgabe?</summary>
+            <p>Meistens ja. Gepflegter Lack und ein sauberer Innenraum sind das Erste, worauf Käufer und Gutachter schauen. Für die Rückgabe gibt es unser Paket „Leasingrückläufer“.</p>
+          </details>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="panels">
-          <!-- Pakete -->
-          <div role="tabpanel" aria-labelledby="tab-pakete" id="panel-pakete" tabindex="0">
+  <!-- Kontakt -->
+  <section id="kontakt" class="section" aria-labelledby="h-kontakt">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="h-kontakt">Termin anfragen <span class="accent">per WhatsApp oder Telefon</span></h2>
+        <p class="lead">Schreiben Sie uns, was Sie sich wünschen, und schicken Sie gern ein paar Fotos mit. Wir melden uns bei Ihnen.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Per WhatsApp anfragen</a>
+          <a class="btn btn-line" href="tel:+4926849572269"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>Anrufen</a>
+        </div>
+      </div>
+      <dl class="contact-list">
+        <div><dt>Öffnungszeiten</dt><dd>Mo–Fr 8–17 Uhr <span class="open-state" data-open-state hidden></span></dd></div>
+        <div><dt>Telefon und WhatsApp</dt><dd class="num"><a href="tel:+4926849572269">02684 9572269</a></dd></div>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Auf+der+Held+14+56305+Puderbach" target="_blank" rel="noopener">Auf der Held 14, 56305 Puderbach</a></dd></div>
+        <div><dt>E-Mail</dt><dd><a href="mailto:jd.brueder@gmail.com">jd.brueder@gmail.com</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© <span class="num">2026</span> JD Brüder GbR, Puderbach</span>
+    <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- Fenster zu den vier Kacheln -->
+<dialog class="sheet" id="sheet-aufbereitung" aria-labelledby="st-aufbereitung">
+  <div class="sheet-head">
+    <h2 id="st-aufbereitung">Aufbereitung</h2>
+    <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <div class="sheet-body">
+    <img class="sheet-img" src="img/w/polieren-s.webp" alt="Eine Poliermaschine arbeitet auf glänzendem Lack" width="720" height="900" loading="lazy">
+    <p class="lead">Handwäsche, Innenraum, Politur und Versiegelung. Als Paket oder einzeln.</p>
+    <p class="muted">Richtpreise inkl. MwSt. Der genaue Preis hängt vom Zustand Ihres Fahrzeugs ab. Schicken Sie uns gern Fotos.</p>
+    <div class="tabs">
+      <div class="tablist" role="tablist" aria-label="Preise Aufbereitung">
+        <button type="button" role="tab" id="tab-pakete" aria-selected="true" tabindex="0">Pakete</button>
+        <button type="button" role="tab" id="tab-einzeln" aria-selected="false" tabindex="-1">Einzelleistungen</button>
+      </div>
+      <div class="panels">
+        <div role="tabpanel" aria-labelledby="tab-pakete" id="panel-pakete">
+            <p class="swipe-hint">Vier Pakete im Vergleich. Wischen Sie die Tabelle zur Seite.</p>
             <div class="compare-wrap" tabindex="0" role="region" aria-label="Pakete im Vergleich">
               <table class="compare-table">
                 <caption class="sr">Pakete im Vergleich: Basic, Premium, Luxus und Exklusiv</caption>
@@ -172,22 +277,20 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                   <tr><th scope="row">Handwäsche</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Felgen und Radkästen reinigen</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Glasflächen und Kunststoffe reinigen</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
-                  <tr><th scope="row">Kunststoffpflege außen und innen</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
-                  <tr><th scope="row">Innenraumreinigung</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
-                  <tr><th scope="row">Lackreinigungsknete</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Kunststoff&shy;pflege außen und innen</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Innenraum&shy;reinigung</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Lack&shy;reinigungs&shy;knete</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Politur</th><td>einstufig</td><td>zweistufig</td><td>Hochglanz</td><td>Hochglanz</td></tr>
-                  <tr><th scope="row">Langzeitversiegelung nach Wahl</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Langzeit&shy;versiegelung nach Wahl</th><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Leder reinigen und pflegen</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Reifen- und Gummipflege</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Carnauba-Wachs für mehr Glanz</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
-                  <tr><th scope="row">Hybridcoating PROFILINE CC One</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Hybrid&shy;coating PROFILINE CC One</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                   <tr><th scope="row">Felgen demontiert und keramisch beschichtet</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
-                  <tr><th scope="row">Keramikversiegelung Labocosmetica</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
+                  <tr><th scope="row">Keramik&shy;versiegelung Labocosmetica</th><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><span class="no" aria-hidden="true">–</span><span class="sr">nicht enthalten</span></td><td><svg class="yes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span class="sr">enthalten</span></td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="swipe-hint">Tabelle seitlich wischen, um alle Pakete zu sehen.</p>
-
             <div class="pkg-group">
               <h3>Weitere Pakete</h3>
               <div class="pkgs">
@@ -213,7 +316,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                     <span class="pkg-dur">ab ca. 1 Std.</span>
                     <span class="pkg-price"><small>ab</small><span class="accent num">55 €</span></span>
                   </summary>
-                  <div class="pkg-body"><p>Sie sagen uns, was Ihnen wichtig ist und was Sie ausgeben möchten – wir stellen die passende Pflege zusammen.</p></div>
+                  <div class="pkg-body"><p>Sie sagen uns, was Ihnen wichtig ist und was Sie ausgeben möchten. Wir stellen die passende Pflege zusammen.</p></div>
                 </details>
                 <details class="pkg">
                   <summary>
@@ -252,10 +355,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
               </div>
             </div>
             <p class="price-note">Für Bus, SUV oder Transporter kommen 50 bis 100 € dazu. Der Endpreis hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab.</p>
-          </div>
-
-          <!-- Einzelleistungen -->
-          <div role="tabpanel" aria-labelledby="tab-einzeln" id="panel-einzeln" tabindex="0" hidden>
+        </div>
+        <div role="tabpanel" aria-labelledby="tab-einzeln" id="panel-einzeln" hidden>
             <div class="pricegrid">
               <table class="pricetable num">
                 <caption>Wäsche und Innenraum</caption>
@@ -278,11 +379,25 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                 </tbody>
               </table>
             </div>
-          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sheet-foot">
+    <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Aufbereitung anfragen</a>
+    <a class="btn btn-line btn-icon" href="tel:+4926849572269" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg></a>
+  </div>
+</dialog>
 
-          <!-- Folie & Veredelung -->
-          <div role="tabpanel" aria-labelledby="tab-folie" id="panel-folie" tabindex="0" hidden>
-            <div class="pricegrid">
+<dialog class="sheet" id="sheet-folie" aria-labelledby="st-folie">
+  <div class="sheet-head">
+    <h2 id="st-folie">Folie</h2>
+    <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <div class="sheet-body">
+    <img class="sheet-img" src="img/w/folieren-scheinwerfer-s.webp" alt="Folie wird von Hand an einem Scheinwerfer angelegt" width="675" height="900" loading="lazy">
+    <p class="lead">Scheibentönung, Voll- und Teilfolierung, Steinschlagschutz.</p>
+    <p class="muted">Richtpreise inkl. MwSt. Der genaue Preis hängt von Fahrzeug und Fläche ab.</p>
               <table class="pricetable num">
                 <caption>Folie</caption>
                 <tbody>
@@ -291,6 +406,22 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                   <tr><th scope="row">Steinschlagschutzfolie</th><td>ab 500 €</td></tr>
                 </tbody>
               </table>
+  </div>
+  <div class="sheet-foot">
+    <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Folierung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Folie anfragen</a>
+    <a class="btn btn-line btn-icon" href="tel:+4926849572269" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg></a>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="sheet-veredelung" aria-labelledby="st-veredelung">
+  <div class="sheet-head">
+    <h2 id="st-veredelung">Veredelung</h2>
+    <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <div class="sheet-body">
+    <img class="sheet-img" src="img/w/ambiente-mittelkonsole-s.webp" alt="Innenraum mit blauer Ambientebeleuchtung an der Mittelkonsole" width="900" height="600" loading="lazy">
+    <p class="lead">Ambiente- und Unterbodenlicht, Sternenhimmel, Interior folieren.</p>
+    <p class="muted">Richtpreise inkl. MwSt.</p>
               <table class="pricetable num">
                 <caption>Veredelung</caption>
                 <tbody>
@@ -300,22 +431,23 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                   <tr><th scope="row">Sternenhimmel</th><td>ab 1.100 €</td></tr>
                 </tbody>
               </table>
-            </div>
-            <p class="price-note">Außerdem: Autoglas, Autoteile, Klimaservice, Öl- und Filterwechsel, Rad- und Reifenwechsel – fragen Sie einfach an.</p>
-          </div>
+    <p class="price-note">Außerdem: Autoglas, Autoteile, Klimaservice, Öl- und Filterwechsel, Rad- und Reifenwechsel. Fragen Sie einfach an.</p>
+  </div>
+  <div class="sheet-foot">
+    <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Veredelung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Veredelung anfragen</a>
+    <a class="btn btn-line btn-icon" href="tel:+4926849572269" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg></a>
+  </div>
+</dialog>
 
-          <!-- Trockeneis -->
-          <div role="tabpanel" aria-labelledby="tab-eis" id="panel-eis" tabindex="0" hidden>
-            <div class="ice">
-              <div>
-                <h3>Trockeneisreinigung mit Dry Ice Energy</h3>
-                <p class="muted" style="margin-top:.8rem">Trockeneis ist gefrorenes CO₂ mit rund −78,5&nbsp;°C. Beim Aufprall wird es sofort gasförmig: Der Schmutz löst sich, zurück bleibt kein Wasser und kein Strahlmittel. Wir reinigen damit Fahrzeuge, aber auch Fassaden, Holz und Maschinen.</p>
-                <p><strong>Preis auf Anfrage</strong> – je nach Fläche und Verschmutzung.</p>
-                <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20h%C3%A4tte%20eine%20Anfrage%20zur%20Trockeneisreinigung." target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-                  Trockeneis anfragen
-                </a>
-              </div>
+<dialog class="sheet" id="sheet-eis" aria-labelledby="st-eis">
+  <div class="sheet-head">
+    <h2 id="st-eis">Trockeneisreinigung</h2>
+    <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <div class="sheet-body">
+    <p class="lead">Ohne Wasser und Chemie: Motorraum, Unterboden, Fassaden, Maschinen.</p>
+    <p class="muted">Trockeneis ist gefrorenes CO₂ mit rund −78,5&nbsp;°C. Beim Aufprall wird es sofort gasförmig: Der Schmutz löst sich, zurück bleibt kein Wasser und kein Strahlmittel. Wir arbeiten mit Dry Ice Energy und reinigen damit Fahrzeuge, aber auch Fassaden, Holz und Maschinen.</p>
+    <p><strong>Preis auf Anfrage</strong>, je nach Fläche und Verschmutzung.</p>
               <ul class="checks">
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ohne Wasser und aggressive Chemie</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Schonend, kein Abtrag der Oberfläche</li>
@@ -324,164 +456,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Innenraum, Unterboden, Motorraum</li>
                 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Fassaden, Graffiti, Kleberreste</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- So läuft's -->
-  <section id="ablauf" class="section stone" aria-labelledby="h-ablauf">
-    <div class="wrap flow">
-      <div>
-        <h2 id="h-ablauf">So läuft’s <span class="accent">in vier Schritten</span></h2>
-        <ol class="steps">
-          <li><h3>Fotos per WhatsApp schicken</h3><p>Ein paar Bilder vom Lack, vom Innenraum und von dem, was Sie stört.</p></li>
-          <li><h3>Preis einschätzen lassen</h3><p>Wir sagen Ihnen, welches Paket passt und was es ungefähr kostet.</p></li>
-          <li><h3>Abholen lassen oder vorbeibringen</h3><p>Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab. Die Kosten dafür nennen wir Ihnen bei der Anfrage. Oder Sie bringen es nach Puderbach.</p></li>
-          <li><h3>Sauber zurückbekommen</h3><p>Wir bringen Ihr Auto zurück, oder Sie holen es bei uns ab.</p></li>
-        </ol>
-      </div>
-      <figure class="chat" aria-label="Beispiel einer WhatsApp-Anfrage">
-        <div class="chat-head"><span class="chat-avatar" aria-hidden="true">JD</span><span><strong>JD Brüder</strong><small>WhatsApp · 02684 9572269</small></span></div>
-        <div class="chat-body">
-          <p class="bubble me">Hallo, was würde eine Aufbereitung für meinen Kombi kosten? Ich schicke Ihnen ein paar Fotos.</p>
-          <div class="bubble me photos" aria-hidden="true"><img src="img/w/abperleffekt-s.webp" alt="" width="900" height="601" loading="lazy"><img src="img/w/innenraum-reinigung-s.webp" alt="" width="720" height="900" loading="lazy"></div>
-          <p class="bubble them">Danke für die Fotos! Wir schauen sie uns an und melden uns mit einer Einschätzung.</p>
-        </div>
-        <figcaption>Beispiel, so sieht eine Anfrage aus.</figcaption>
-        <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20schicke%20Ihnen%20Fotos%20von%20meinem%20Auto." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Fotos per WhatsApp schicken</a>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Vorher / Nachher -->
-  <section id="arbeiten" class="section dark" aria-labelledby="h-arbeiten">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="h-arbeiten">Vorher, nachher <span class="accent">aus unserer Werkstatt</span></h2>
-        <p class="lead">Echte Fahrzeuge, echte Ergebnisse. Ziehen Sie den Regler über die Felge.</p>
-      </div>
-      <div class="work">
-        <figure class="compare">
-          <div class="compare-frame">
-            <img src="img/w/felge-vorher-s.webp" alt="Felge vorher: braun von Bremsstaub und Schmutz" width="506" height="900" loading="lazy">
-            <img class="after" src="img/w/felge-nachher-s.webp" alt="Dieselbe Felge nachher: sauber und silbern" width="506" height="900" loading="lazy">
-            <span class="compare-line" aria-hidden="true"></span>
-            <span class="compare-knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
-            <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: links vorher, rechts nachher">
-          </div>
-          <figcaption><strong>Felgenreinigung.</strong> Bremsstaub entfernt, Oberfläche geschützt.</figcaption>
-        </figure>
-        <figure class="still">
-          <img src="img/w/motorhaube-5050-s.webp" alt="Motorhaube unter Wabenlicht: links matt mit Kratzern, rechts poliert und spiegelnd" width="900" height="600" loading="lazy">
-          <figcaption><strong>Politur, halb und halb.</strong> Links vorher, rechts nach der Hochglanzpolitur.</figcaption>
-        </figure>
-        <figure class="still">
-          <img src="img/w/leder-vorher-nachher-2-s.webp" alt="Heller Ledersitz: vordere Hälfte gereinigt, hintere Hälfte noch verschmutzt" width="900" height="600" loading="lazy">
-          <figcaption><strong>Lederreinigung.</strong> Die gereinigte Hälfte zeigt die echte Farbe des Leders.</figcaption>
-        </figure>
-      </div>
-
-      <div class="gallery" data-gallery>
-        <a href="img/w/kuga.webp"><img src="img/w/kuga-s.webp" alt="Orangefarbener Ford Kuga mit glänzendem Lack nach der Aufbereitung" width="720" height="900" loading="lazy"></a>
-        <a href="img/w/abperleffekt.webp"><img src="img/w/abperleffekt-s.webp" alt="Wasser perlt auf versiegeltem Lack ab" width="900" height="601" loading="lazy"></a>
-        <a href="img/w/z4-cabrio.webp"><img src="img/w/z4-cabrio-s.webp" alt="BMW Z4 Cabrio mit hellbraunem Leder nach der Innenraumpflege" width="900" height="506" loading="lazy"></a>
-        <a href="img/w/tuer-innen.webp"><img src="img/w/tuer-innen-s.webp" alt="Türverkleidung mit braunem Leder und Carbon-Optik" width="602" height="900" loading="lazy"></a>
-      </div>
-      <p class="insta">Mehr Arbeiten auf Instagram: <a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></p>
-    </div>
-  </section>
-
-  <!-- Über uns + FAQ -->
-  <section id="ueber-uns" class="section" aria-labelledby="h-about">
-    <div class="wrap">
-      <div class="about">
-        <img src="img/w/trocknen-studio-s.webp" alt="Ein schwarzes Fahrzeug wird in der Werkstatt unter den Wabenleuchten von Hand getrocknet" width="675" height="900" loading="lazy">
-        <div>
-          <h2 id="h-about">Zwei Brüder, <span class="accent">eine Werkstatt</span></h2>
-          <p>Wir sind Jonathan und David Apelt. 2022 haben wir JD Brüder in Daufenbach gegründet, heute arbeiten wir in unserer Werkstatt in Puderbach – zu viert, mit zwei Mitarbeitern.</p>
-          <p>Ob Kleinwagen, Familien-SUV oder Liebhaberstück: Wir behandeln jedes Auto, als wäre es unser eigenes – mit Sorgfalt, Geduld und den richtigen Mitteln.</p>
-        </div>
-      </div>
-
-      <div class="faq-block">
-        <h2>Häufige Fragen</h2>
-        <div class="faq">
-          <details>
-            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie erfahre ich den genauen Preis?</summary>
-            <p>Die Preise auf dieser Seite sind Richtwerte, denn der Aufwand hängt von Verschmutzung, Lackzustand und Fahrzeuggröße ab. Am einfachsten schicken Sie uns per WhatsApp ein paar Fotos Ihres Fahrzeugs, dann schätzen wir den Preis für Sie ein.</p>
-          </details>
-          <details>
-            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Holen Sie mein Auto auch ab?</summary>
-            <p>Ja. Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab und bringen es sauber zurück. Was das kostet, sagen wir Ihnen bei der Anfrage.</p>
-          </details>
-          <details>
-            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Wie oft sollte ein Auto aufbereitet werden?</summary>
-            <p>Viele Kunden kommen ein- bis zweimal im Jahr: im Frühjahr nach dem Streusalz und im Herbst vor dem Winter. Wir beraten Sie gern, was für Ihr Auto sinnvoll ist.</p>
-          </details>
-          <details>
-            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Was bringt eine Lackversiegelung?</summary>
-            <p>Sie schützt den Lack vor UV-Strahlung, Vogelkot, Insekten und Streusalz. Wasser und Schmutz perlen ab, das Auto bleibt länger sauber und lässt sich leichter waschen.</p>
-          </details>
-          <details>
-            <summary><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>Lohnt sich eine Aufbereitung vor Verkauf oder Leasingrückgabe?</summary>
-            <p>Meistens ja. Gepflegter Lack und ein sauberer Innenraum sind das Erste, worauf Käufer und Gutachter schauen. Für die Rückgabe gibt es unser Paket „Leasingrückläufer“.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kontakt -->
-  <section id="kontakt" class="section dark" aria-labelledby="h-kontakt">
-    <div class="wrap contact-grid">
-      <div>
-        <h2 id="h-kontakt">Termin anfragen <span class="accent">per WhatsApp oder Telefon</span></h2>
-        <p class="lead">Schreiben Sie uns, was Sie sich wünschen, und schicken Sie gern ein paar Fotos mit. Wir melden uns bei Ihnen.</p>
-        <div class="actions" style="margin-top:1.8rem">
-          <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-            Per WhatsApp anfragen
-          </a>
-          <a class="btn btn-line" href="tel:+4926849572269">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
-            Anrufen
-          </a>
-        </div>
-      </div>
-      <dl class="contact-list">
-        <div><dt>Öffnungszeiten</dt><dd>Mo–Fr 8–17 Uhr <span class="open-state" data-open-state hidden></span></dd></div>
-        <div><dt>Telefon und WhatsApp</dt><dd class="num"><a href="tel:+4926849572269">02684 9572269</a></dd></div>
-        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Auf+der+Held+14+56305+Puderbach" target="_blank" rel="noopener">Auf der Held 14, 56305 Puderbach</a></dd></div>
-        <div><dt>E-Mail</dt><dd><a href="mailto:jd.brueder@gmail.com">jd.brueder@gmail.com</a></dd></div>
-        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/jd.brueder/" target="_blank" rel="noopener">@jd.brueder</a></dd></div>
-      </dl>
-    </div>
-  </section>
-</main>
-
-<footer class="foot">
-  <div class="wrap">
-    <span>© <span class="num">2026</span> JD Brüder GbR, Puderbach</span>
-    <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
-</footer>
-
-<div class="dock" aria-label="Schnellkontakt">
-  <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>
-    WhatsApp
-  </a>
-  <a class="btn btn-line" href="tel:+4926849572269">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
-    Anrufen
-  </a>
-</div>
+  <div class="sheet-foot">
+    <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20h%C3%A4tte%20eine%20Anfrage%20zur%20Trockeneisreinigung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Trockeneis anfragen</a>
+    <a class="btn btn-line btn-icon" href="tel:+4926849572269" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg></a>
+  </div>
+</dialog>
 
 <dialog class="lightbox" aria-label="Bild vergrößert">
-  <button type="button" aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  <button type="button" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
   <figure style="margin:0"></figure>
 </dialog>
 

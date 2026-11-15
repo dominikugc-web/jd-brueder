@@ -1,4 +1,4 @@
-// Preise: Reiter (Tabs) mit Pfeiltasten
+// Umschalter Pakete / Einzelleistungen (Tabs mit Pfeiltasten)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 function selectTab(tab, focus = false) {
   for (const t of tabs) {
@@ -8,7 +8,6 @@ function selectTab(tab, focus = false) {
     document.querySelector(`[aria-labelledby="${t.id}"]`).hidden = !on;
   }
   if (focus) tab.focus();
-  tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 tabs.forEach((tab, i) => {
   tab.addEventListener('click', () => selectTab(tab));
@@ -19,11 +18,24 @@ tabs.forEach((tab, i) => {
     selectTab(tabs[(map[e.key] + tabs.length) % tabs.length], true);
   });
 });
-// Leistungs-Kacheln öffnen den passenden Reiter
-document.querySelectorAll('[data-tab]').forEach((link) => {
-  link.addEventListener('click', () => {
-    const tab = document.getElementById(link.dataset.tab);
-    if (tab) selectTab(tab);
+
+// Kacheln öffnen ihr Fenster von unten
+document.querySelectorAll('[data-sheet]').forEach((tile) => {
+  tile.addEventListener('click', () => {
+    const sheet = document.getElementById(tile.dataset.sheet);
+    sheet.showModal();
+    sheet.querySelector('.sheet-body').scrollTop = 0;
+  });
+});
+
+// Direktlink, z. B. index.html#sheet-folie, öffnet das passende Fenster sofort
+const linked = location.hash.startsWith('#sheet-') ? document.getElementById(location.hash.slice(1)) : null;
+if (linked?.matches('dialog.sheet')) linked.showModal();
+
+// Alle Fenster: schließen per Knopf oder Tipp daneben
+document.querySelectorAll('dialog').forEach((dialog) => {
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog || e.target.closest('[data-close]')) dialog.close();
   });
 });
 
@@ -57,16 +69,14 @@ document.querySelector('[data-gallery]')?.addEventListener('click', (e) => {
   fig.replaceChildren(img, cap);
   box.showModal();
 });
-box?.querySelector('button').addEventListener('click', () => box.close());
-box?.addEventListener('click', (e) => { if (e.target === box) box.close(); });
 
-// Kontaktleiste auf dem Handy erst nach dem ersten Bildschirm
-const dock = document.querySelector('.dock');
-const hero = document.querySelector('.hero');
-if (dock && hero && 'IntersectionObserver' in window) {
-  new IntersectionObserver(([entry]) => dock.classList.toggle('show', !entry.isIntersecting), { threshold: 0 }).observe(hero);
-} else if (dock) {
-  dock.classList.add('show');
+// Runder WhatsApp-Knopf: erscheint, sobald die Knöpfe im Kopfbereich aus dem Bild sind
+const fab = document.querySelector('.fab');
+const heroActions = document.querySelector('.hero .actions');
+if (fab && heroActions && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => fab.classList.toggle('show', !entry.isIntersecting), { threshold: 0 }).observe(heroActions);
+} else if (fab) {
+  fab.classList.add('show');
 }
 
 // Öffnungszeiten: Mo–Fr 8–17 Uhr (deutsche Zeit)

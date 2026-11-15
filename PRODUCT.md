@@ -40,11 +40,11 @@ Services and prices are listed in the company profile (`JD-Brueder-Firmenprofil.
 
 ## Evidence on Hand
 
-32 own photos from the Wix gallery (studio, polishing, interiors, ambient lighting, wheels, headlights), including real before/after shots: 50/50 polished hood, wheel "Vorher"/"Nachher", half-cleaned leather seat. No customer reviews, ratings, certificates or guarantees exist — never invent them. Some Wix images are manufacturer/stock (ambient-light product shot, dry-ice product shot, red sports car hero) and must not be shown as own work.
+The hero image on the start page is an AI illustration (Gemini, 15 Nov 2026: one car, half neglected, half detailed) and is declared as such in the Impressum; it is a visual hook, never proof of work. 32 own photos from the Wix gallery (studio, polishing, interiors, ambient lighting, wheels, headlights), including real before/after shots: 50/50 polished hood, wheel "Vorher"/"Nachher", half-cleaned leather seat. No customer reviews, ratings, certificates or guarantees exist — never invent them. Some Wix images are manufacturer/stock (ambient-light product shot, dry-ice product shot, red sports car hero) and must not be shown as own work.
 
 ## Product Principles
 
-1. Contact in one tap: WhatsApp and call are always reachable.
+1. Contact in one tap: a round WhatsApp button sits bottom right, call is in the header.
 2. Prices in the open, honest "ab" wording.
 3. Show the work, not adjectives — own photos and before/after over long texts.
 4. Family workshop, premium standard: proud but grounded.

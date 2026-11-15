@@ -1,21 +1,19 @@
 ---
 name: JD Brüder
-description: Car detailing in the Westerwald. A clear, light workshop page – overview first, prices in tabs, contact one tap away.
+description: Car detailing in the Westerwald. A dark, phone-first workshop page with four fixed service tiles, details in bottom sheets and WhatsApp one tap away.
 colors:
-  white: "#ffffff"
   black: "#000000"
-  stone: "#f3f3f1"
-  line: "#e2e2df"
-  line-dark: "#262626"
-  text: "#1a1a1a"
-  text-2: "#5b5b58"
-  text-inv: "#f4f4f2"
-  text-inv-2: "#b3b2ad"
+  panel: "#111111"
+  panel-2: "#181818"
+  line: "#262626"
+  text: "#f4f4f2"
+  text-2: "#b3b2ad"
   gold: "#b49759"
   gold-hover: "#c7ab6e"
-  dash: "#a3a39f"
-  row-alt: "#fafaf9"
-  bubble-me: "#e7f6dc"
+  white: "#ffffff"
+  whatsapp: "#1da851"
+  sheet-handle: "#3d3d3d"
+  dash: "#6f6f6b"
   status-closed: "#8a8a86"
   status-open-text: "#9fe0a6"
   status-open-dot: "#4cc35a"
@@ -23,100 +21,71 @@ typography:
   sans: "Inter (variable, self-hosted) – all text"
   accent: "Instrument Serif Italic (self-hosted) – accents only"
   h1: "clamp(2.1rem, 4.6vw, 3.6rem) / 1.08, weight 600, -0.025em"
-  h2: "clamp(2rem, 4.2vw, 3.2rem) / 1.08, weight 600, -0.025em"
-  h3: "1.25rem / 1.25, weight 600"
+  h2: "clamp(1.85rem, 4vw, 3rem) / 1.08, weight 600, -0.025em"
+  h3: "1.2rem / 1.25, weight 600"
   body: "1.0625rem / 1.6, weight 400"
-  lead: "clamp(1.1rem, 1.5vw, 1.25rem), text-2"
-  small: "0.9–0.97rem for captions, durations, notes"
-  price: "Instrument Serif Italic, clamp(1.8rem, 3vw, 2.2rem) in package rows, 1.6rem on cards"
+  lead: "clamp(1.05rem, 1.5vw, 1.2rem), text-2"
+  wordmark: "Inter 700, 1rem, uppercase, 0.14em tracking, gold"
+  price: "Instrument Serif Italic in gold: 1.45rem on tiles, 1.8–1.9rem in package rows and the comparison table"
 rounded:
-  card: "10px"
-  pill: "999px (buttons, menu button)"
+  card: "14px (tiles, photos, panels)"
+  small: "10px (gallery thumbs, menu items, logo plate)"
+  sheet: "22px (top corners of the bottom sheet)"
+  pill: "999px (buttons, menu button, segmented control)"
   focus: "4px"
-  chat: "18px (chat card)"
-  bubble: "14px (chat bubbles)"
 motion:
   ease: "cubic-bezier(.22, 1, .36, 1)"
-  durations: "0.2s colour changes, 0.3s accordion height, 0.4s dock, 0.6s image zoom on hover"
+  durations: "0.2s colour changes, 0.3s accordion height, 0.38s sheet slide-up, 0.4s WhatsApp button"
 ---
 
 # JD Brüder – Design System
 
-This replaces the earlier "Etikettenserie" (black ground, Caslon, label cards). The owner asked for the change because the page felt cluttered. All text is now Inter, and Instrument Serif italic is used only as an accent.
+This replaces the light "overview first" page (white and stone, prices in tabs). The brief on 15 Nov 2026: phone first (about 95 % of visitors), dark black-and-gold look, fixed tiles, not crowded, WhatsApp button bottom right. An earlier dark version was dropped because it felt cluttered, so the rule that matters most here is restraint.
 
 ## Principles
 
-1. **Overview first.** The page runs hero → four service cards → prices in tabs → how it works (Ablauf) → before/after → about + FAQ → contact. Nothing else.
-2. **Light by default, black for emphasis.** White and stone carry the content. Black is reserved for the before/after section, the contact block and the footer. The brand manual targets about 45 % white and 40 % black.
-3. **Gold is for action.** It appears on the WhatsApp button (gold fill, black text, 7.5:1) and on the "Trockeneis" card face. Never use gold text on white.
-4. **One accent face, two uses only.** Instrument Serif Italic appears in two places:
-   - the second line of h1/h2 (`<span class="accent">`, rendered as its own line);
-   - prices.
-   It never appears in body text, buttons, navigation or labels.
-5. **No invented claims.** Prices are "ab"/Richtpreise. Add no reviews, guarantees or promises the owners have not confirmed.
-
-## Tokens
-
-| Token | Value | Use |
-|---|---|---|
-| `--white` | #ffffff | page ground |
-| `--stone` | #f3f3f1 | services section ground |
-| `--black` | #000000 | dark sections, footer |
-| `--text` | #1a1a1a | body on white (17.4:1) |
-| `--text-2` | #5b5b58 | secondary on white (6.8:1) / stone (6.1:1) |
-| `--text-inv` / `--text-inv-2` | #f4f4f2 / #b3b2ad | text on black (9.9:1 for secondary) |
-| `--line` / `--line-dark` | #e2e2df / #262626 | 1px dividers |
-| `--gold` / `--gold-hover` | #b49759 / #c7ab6e | primary button, accents on black |
-| `--radius` | 10px | cards, photos, menu |
-| `--header-h` | 4.25rem | sticky header; also scroll-padding |
-
-Headings use `font-size-adjust: from-font`, so the serif accent line matches Inter's x-height. Where that is unsupported, `.accent` falls back to 1.12em.
+1. **Phone first, short page.** Hero → four service tiles → before/after → four steps → about + FAQ → contact. Prices live inside the sheets, not on the page. The page shrank from about 12 to about 7 phone screens.
+2. **One strong image.** The hero shows one car, half neglected and half detailed, split by a thin gold line. Nothing else on the page competes with it.
+3. **The gold line is the motif.** The same gold line divides the before/after slider. Gold otherwise marks action (primary buttons) and prices.
+4. **Black is black.** Page ground is #000000, surfaces are #111111 with a 1px #262626 line. No gradients as decoration, no glow, no shadows on tiles.
+5. **One accent face, two uses only.** Instrument Serif Italic for the second line of h1/h2 (in gold) and for prices. Never in body text, buttons, navigation or labels.
+6. **No invented claims.** Prices are "ab"/Richtpreise. No reviews, guarantees or promises the owners have not confirmed.
+7. **Real photos prove the work.** Only the hero is an AI illustration (stated in the Impressum). Tiles, sheets, before/after and gallery use the workshop's own photos.
 
 ## Components
 
-**Buttons** (`.btn`): pill shape, min-height 3rem, Inter 600.
-- `.btn-gold` is the primary action (WhatsApp).
-- `.btn-line` is the secondary action (Anrufen, and the phone number in the header). It inverts inside `.dark`.
-- Icons are 1.2rem stroke SVGs (stroke 1.8), never emoji.
+**Header**: sticky, black at 82 % with blur. Gold wordmark left. On phones a round call button and the "Menü" button (native `popover`); from 900px inline links and a phone pill.
 
-**Header**: sticky white bar with the "JD Brüder" wordmark (Inter 700), nav links and a phone pill. Under 900px the nav collapses into a native `popover` menu, opened by the "Menü" button. Tapping a link closes it.
+**Hero**: phone: image cropped to 10:9 from the top, fading into black, headline overlapping the fade, two full-width buttons (WhatsApp in gold, "Leistungen und Preise" as outline). From 900px the wide image fills the section and the text sits on the dark left third. Images: `img/w/hero-mobil.webp` (4:5) and `img/w/hero-desktop.webp` (16:9).
 
-**Hero**: two columns at ≥900px (text left, photo right at 5:6). On mobile it stacks, with the photo first at 4:3. It contains:
-- the full logo at 170px (150px on mobile, the brand minimum);
-- the h1 and the lead;
-- two buttons;
-- a row of three facts with icons.
+**Service tile** (`button.tile`): fixed 2×2 grid on phones, 4×1 from 900px, ratio 4:5. Photo, dark gradient from the bottom, name, "ab" price in the gold accent face, a small plus badge as the tap cue. "Trockeneis" has no own photo and shows a gold ice crystal instead. A tap opens the matching sheet (`data-sheet`).
 
-**Service card** (`.service`): a 4:3 photo, an h3, one sentence, an "ab" price in the accent face and a "Zu den Preisen" link. The whole card links to `#preise` and selects the matching tab (`data-tab`). The dry-ice card has no own photo, so it uses a black face with the word in the gold accent.
+**Bottom sheet** (`dialog.sheet`): native modal dialog, slides up from the bottom, max 90dvh, content scrolls inside. Head with title and close button, body with photo, one sentence, prices, fixed foot with "… anfragen" (WhatsApp, text pre-filled for that service) and a call button. Closes via the button, a tap on the backdrop, Esc or the back gesture. From 900px it is a centred window. A link like `index.html#sheet-folie` opens a sheet directly.
 
-**Price tabs**:
-- `role="tablist"` with button tabs, arrow/Home/End keys and a roving tabindex.
-- The panels share one grid cell and are switched with `hidden`.
-- The selected tab gets the text colour plus a 3px underline drawn as a pseudo-element border, so colour is not the only cue.
+**Segmented control** (`.tablist`): "Pakete" / "Einzelleistungen" inside the Aufbereitung sheet. Selected segment is light with black text; arrow, Home and End keys work.
 
-**Package row** (`details.pkg`): a chevron and the package name, the duration below it, and the price on the right in the accent face. The body lists the contents. The "Alles aus …, dazu:" line is in text colour at weight 600. The height animates via `::details-content` and respects reduced-motion.
+**Package comparison** (`.compare-table`): Basic to Exklusiv as columns. Fixed layout with a narrow sticky first column so two packages are visible on a phone; the hint to swipe stands above the table. Check and dash carry hidden text.
 
-**Price table** (`.pricetable`): the caption serves as the title, rows are separated by 1px rules, and prices are right-aligned in tabular figures.
+**Package row** (`details.pkg`), **price table** (`.pricetable`): as before, now on dark with gold prices.
 
-**Before/after slider**: two stacked images, with `clip-path` on the after image. A transparent `input[type=range]` on top handles keyboard and touch. The knob is white.
+**Before/after slider**: gold line and gold knob, "Vorher" and "Nachher" tags in the corners, transparent range input on top for touch and keyboard.
 
-**Gallery**: four square tiles (2×2 on mobile, 4×1 on desktop) with a native `<dialog>` lightbox.
+**Gallery**: six square thumbs in three columns, native `<dialog>` lightbox with the alt text as caption.
 
-**Mobile dock**: a fixed WhatsApp + Anrufen bar under 761px. It appears once the hero has left the viewport. `scroll-padding-bottom` keeps anchored content clear of it.
+**Steps** (`ol.steps`): gold outlined numbers, only for the real four-step sequence.
 
-**Package comparison** (`.compare-table` in `.compare-wrap`): Basic–Exklusiv as columns (name, accent price, duration), services as rows with check / dash; dash and check carry hidden text ("enthalten" / "nicht enthalten"). Wrapper scrolls horizontally on phones (`position: relative` so hidden labels stay clipped), first column sticky, hint line "Tabelle seitlich wischen" under 761px. Other packages (High End, Ganz nach Wunsch, Schnelle Wäsche, Leasingrückläufer) stay as `details.pkg` rows under "Weitere Pakete".
+**Logo plate**: the logo has black areas and vanishes on black. It is never recoloured; it sits on a white plate over the about photo at 152px width (brand minimum 150px).
 
-**Steps** (`ol.steps`): numbered black circles – only for the real four-step sequence (photos → estimate → pick-up or drop-off → return).
+**WhatsApp button** (`.fab`): round, 60px, bottom right, WhatsApp green with the white glyph (3.1:1). It appears once the hero buttons have left the viewport and stays above the safe area.
 
-**Chat preview** (`figure.chat`): example WhatsApp exchange, always captioned as an example, with the gold "Fotos per WhatsApp schicken" button.
-
-**Opening state** (`[data-open-state]`): Mo–Fr 8–17 Uhr evaluated in Europe/Berlin; shows "Jetzt geöffnet" (green dot) or "Jetzt geschlossen". Public holidays are not handled.
+**Opening state** (`[data-open-state]`): Mo–Fr 8–17 Uhr in Europe/Berlin. Public holidays are not handled.
 
 ## Do / Don't
 
 | Do | Don't |
 |---|---|
-| Keep sections in the fixed order above | Add new long text sections; put details into the FAQ or a tab |
-| Use the accent only for second lines of headings and prices | Italicise single words for emphasis, or set body text or buttons in the serif |
-| Show own workshop photos | Use stock or manufacturer images as own work, or photos with readable number plates |
-| Use gold for the main action | Use gold text on white |
+| Put new details into a sheet or the FAQ | Add new long sections to the page |
+| Keep exactly four tiles in the fixed grid | Add a fifth tile or mix tile sizes |
+| Use gold for the main action, prices and the dividing line | Use gold for body text or decoration |
+| Show own workshop photos as proof | Show AI or stock images as own work, or photos with readable number plates |
+| Keep the logo on its white plate | Recolour the logo or place it directly on black |
