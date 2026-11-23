@@ -24,13 +24,13 @@ A two-brother family workshop in the Westerwald with a professional detailing st
 
 ## Operating Context
 
-- Primary contact: phone 02684 9572269; WhatsApp runs on the same landline number (+49 2684 9572269, WhatsApp Business). No contact form for now.
+- Primary contact: phone 02684 9572269; WhatsApp runs on the same landline number (+49 2684 9572269, WhatsApp Business). Since 23 Nov 2026 also an inquiry form (`#sheet-anfrage`, same questions as the Meta lead form plus e-mail) that lands in the JD Vertrieb app.
 - Address: Auf der Held 14, 56305 Puderbach. E-mail jd.brueder@gmail.com. Instagram @jd.brueder.
 - Prices are guide prices ("ab"); final price depends on vehicle condition. Dry ice and High End Detailing: on request / inspection.
 
 ## Capabilities and Constraints
 
-Services and prices are listed in the company profile (`JD-Brueder-Firmenprofil.md` in the JD Claude Drive folder): packages (Ganz nach Wunsch → High End Detailing), single services, film technology, upgrades (Interior folieren, Unterboden-/Ambientebeleuchtung, Sternenhimmel), dry ice, auto service. The "Montage" business line must NOT appear yet. The domain jd-brueder.de still points to Wix; switching is a later decision.
+Services and prices are listed in the company profile (`JD-Brueder-Firmenprofil.md` in the JD Brain folder, `~/JD Brain` on the Extreme Pro SSD): packages (Ganz nach Wunsch → High End Detailing), single services, film technology, upgrades (Interior folieren, Unterboden-/Ambientebeleuchtung, Sternenhimmel), dry ice, auto service. The "Montage" business line must NOT appear yet. Since 23 Nov 2026 www.jd-brueder.de points to this GitHub Pages site (DNS stays at Wix because Google Mail runs on the domain; the old Wix site stays in the Wix account).
 
 ## Brand Commitments
 
