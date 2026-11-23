@@ -254,7 +254,11 @@ dialog.sheet::backdrop { background: rgb(0 0 0 / .72); }
   @starting-style { dialog.sheet[open]::backdrop { background: rgb(0 0 0 / 0); } }
 }
 
-/* Anfrageformular: eine Frage pro Schritt, große Antwortflächen zum Antippen */
+/* Anfrageformular: eine Frage pro Schritt, große Antwortflächen zum Antippen.
+   Das Fenster hat eine feste Höhe und hängt oben fest: Es wechselt nicht die Größe je Frage, und wenn am Handy
+   die Tastatur aufgeht, endet es einfach über ihr (--oben und --hoehe setzt main.js aus dem sichtbaren Bereich). */
+#sheet-anfrage { top: calc(var(--oben, 0px) + 10dvh); bottom: auto; height: calc(var(--hoehe, 100dvh) - 10dvh); max-height: none; }
+@media (min-width: 900px) { #sheet-anfrage { inset: 0; height: min(40rem, 86dvh); } }
 .anfrage fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 .anfrage legend, .anfrage-done h3 { padding: 0; font-size: 1.35rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.25; }
 .step-n { margin: .3rem 0 1.1rem; color: var(--text-2); font-size: .9rem; }

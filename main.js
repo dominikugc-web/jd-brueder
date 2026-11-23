@@ -109,6 +109,16 @@ if (form) {
   form.addEventListener('change', (e) => { if (e.target.name === 'interesse') zeige(1); });
   form.querySelectorAll('[data-back]').forEach((b) => b.addEventListener('click', () => zeige(at - 1)));
   form.closest('dialog').addEventListener('close', () => { if (at === 3) zeige(0); });
+  // Tastatur am Handy: Das Fenster bleibt oben stehen und reicht nur bis zur Tastatur, statt dass iOS es verschiebt.
+  const vv = window.visualViewport, fenster = form.closest('dialog');
+  const passe = () => {
+    if (!fenster.open || innerWidth >= 900) return;
+    fenster.style.setProperty('--oben', vv.offsetTop + 'px');
+    fenster.style.setProperty('--hoehe', vv.height + 'px');
+    if (form.contains(document.activeElement)) document.activeElement.scrollIntoView({ block: 'nearest' });
+  };
+  vv?.addEventListener('resize', passe);
+  vv?.addEventListener('scroll', passe);
   // Jeder Weiter-Knopf und Enter landen hier: erst die aktuelle Frage prüfen, dann weiter oder absenden
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
