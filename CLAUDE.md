@@ -7,7 +7,7 @@ Vor jeder gestalterischen Änderung `DESIGN.md` (Design-System) und `PRODUCT.md`
 ## Ablauf bei Änderungen
 
 1. Zuerst `git pull`, denn Dominik und David ändern beide an der Seite.
-2. Änderung machen, dann lokal ansehen (`npx http-server . -p 8765`, Seite im Handy-Format prüfen, etwa 95 % der Besucher kommen mit dem Handy).
+2. Änderung machen, dann lokal ansehen (`python3 -m http.server 8765` in diesem Ordner, dann http://localhost:8765, Seite im Handy-Format prüfen, etwa 95 % der Besucher kommen mit dem Handy).
 3. Dem Nutzer zeigen, was sich ändert (Screenshot oder kurze Beschreibung), und **auf sein Okay warten**.
 4. Erst dann committen und auf `main` pushen. Nach etwa einer Minute ist die Änderung live, also danach einmal auf https://www.jd-brueder.de prüfen.
 
