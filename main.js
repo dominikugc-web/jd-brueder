@@ -122,7 +122,7 @@ if (form) {
   // Jeder Weiter-Knopf und Enter landen hier: erst die aktuelle Frage prüfen, dann weiter oder absenden
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (![...steps[at].querySelectorAll('input:not([name="web"])')].every((i) => i.reportValidity())) return;
+    if (![...steps[at].querySelectorAll('input')].every((i) => i.reportValidity())) return;
     if (at < 2) return zeige(at + 1);
     senden.disabled = true;
     fehler.hidden = true;
