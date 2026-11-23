@@ -91,3 +91,43 @@ if (state) {
   state.classList.toggle('is-open', open);
   state.hidden = false;
 }
+
+// Anfrageformular: eine Frage pro Schritt wie bei Meta. Die Antwort landet in JD Vertrieb (Tabelle „Website-Anfragen“).
+const ANFRAGE_API = 'https://script.google.com/macros/s/AKfycbzYjAuA_iCfbLlwKT7o_UzdLNEe3P0EfnMejcjpMYat8qnJyQuO0sl8tEvW-ijtd6Fr/exec';
+const form = document.querySelector('[data-anfrage]');
+if (form) {
+  const steps = [...form.querySelectorAll('[data-step]')];
+  const fehler = form.querySelector('.form-error');
+  const senden = steps[2].querySelector('[type="submit"]');
+  let at = 0;
+  const zeige = (i) => {
+    steps.forEach((s, j) => { s.hidden = j !== i; });
+    at = i;
+    form.scrollTop = 0;
+    (steps[i].querySelector('.input') || steps[i].querySelector('h3'))?.focus();
+  };
+  form.addEventListener('change', (e) => { if (e.target.name === 'interesse') zeige(1); });
+  form.querySelectorAll('[data-back]').forEach((b) => b.addEventListener('click', () => zeige(at - 1)));
+  form.closest('dialog').addEventListener('close', () => { if (at === 3) zeige(0); });
+  // Jeder Weiter-Knopf und Enter landen hier: erst die aktuelle Frage prüfen, dann weiter oder absenden
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (![...steps[at].querySelectorAll('input:not([name="web"])')].every((i) => i.reportValidity())) return;
+    if (at < 2) return zeige(at + 1);
+    senden.disabled = true;
+    fehler.hidden = true;
+    try {
+      const r = await fetch(ANFRAGE_API, { method: 'POST', body: JSON.stringify({ aktion: 'anfrage', ...Object.fromEntries(new FormData(form)) }) });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.fehler);
+      form.reset();
+      zeige(3);
+    } catch (err) {
+      fehler.firstElementChild.textContent = err instanceof SyntaxError || err instanceof TypeError || !err.message
+        ? 'Das hat leider nicht geklappt. Bitte versuchen Sie es gleich noch einmal.' : err.message;
+      fehler.hidden = false;
+    } finally {
+      senden.disabled = false;
+    }
+  });
+}

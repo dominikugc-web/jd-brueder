@@ -36,6 +36,7 @@ AUFBAU: Zuerst fürs Handy. Kopfbild (Foto aus unserer Halle) > vier feste Kache
 KACHELN: Ein Tipp öffnet ein Fenster von unten mit Foto, zwei Sätzen, Preisen und WhatsApp-Knopf. So bleibt die Startseite kurz.
 BILDER: Alle Fotos stammen aus der Werkstatt. Das Kopfbild wurde nachbearbeitet (aufgeräumt und geschärft, im Impressum genannt).
 KONTAKT: Runder WhatsApp-Knopf unten rechts, sobald die Knöpfe im Kopfbereich aus dem Bild sind.
+FORMULAR: Fenster #sheet-anfrage, gleiche Fragen wie das Meta-Formular plus E-Mail, landet in JD Vertrieb (Tabelle „Website-Anfragen“).
 Regeln und Farben stehen in DESIGN.md.
 -->
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -73,7 +74,7 @@ Regeln und Farben stehen in DESIGN.md.
       <p class="lead">Fahrzeugaufbereitung in Puderbach im Westerwald. Fotos per WhatsApp schicken, Preis erfahren.</p>
       <div class="actions">
         <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Per WhatsApp anfragen</a>
-        <a class="btn btn-line" href="#leistungen">Leistungen und Preise</a>
+        <button type="button" class="btn btn-line" data-sheet="sheet-anfrage">Per Formular anfragen</button>
       </div>
     </div>
   </section>
@@ -220,6 +221,7 @@ Regeln und Farben stehen in DESIGN.md.
         <p class="lead">Schreiben Sie uns, was Sie sich wünschen, und schicken Sie gern ein paar Fotos mit. Wir melden uns bei Ihnen.</p>
         <div class="actions">
           <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Per WhatsApp anfragen</a>
+          <button type="button" class="btn btn-line" data-sheet="sheet-anfrage">Per Formular anfragen</button>
           <a class="btn btn-line" href="tel:+4926849572269"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>Anrufen</a>
         </div>
       </div>
@@ -242,6 +244,50 @@ Regeln und Farben stehen in DESIGN.md.
 </footer>
 
 <a class="fab" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener" aria-label="Per WhatsApp anfragen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- Anfrageformular: eine Frage pro Schritt wie das Meta-Formular, dazu die E-Mail -->
+<dialog class="sheet" id="sheet-anfrage" aria-labelledby="st-anfrage">
+  <div class="sheet-head">
+    <h2 id="st-anfrage">Anfrage</h2>
+    <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+  </div>
+  <form class="sheet-body anfrage" data-anfrage novalidate>
+    <fieldset data-step>
+      <legend>Wofür interessieren Sie sich?</legend>
+      <p class="step-n">Frage 1 von 3</p>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="interesse" value="referenzauto" required><span>Referenzauto (20 %)</span></label>
+        <label class="choice"><input type="radio" name="interesse" value="leasing" required><span>Leasing-Check</span></label>
+        <label class="choice"><input type="radio" name="interesse" value="aufbereitung" required><span>Premium-Aufbereitung</span></label>
+        <label class="choice"><input type="radio" name="interesse" value="folie" required><span>Steinschlagschutzfolie</span></label>
+        <label class="choice"><input type="radio" name="interesse" value="anderes" required><span>Etwas anderes</span></label>
+      </div>
+      <div class="step-nav step-nav-1"><button type="submit" class="btn btn-gold">Weiter</button></div>
+    </fieldset>
+    <fieldset data-step hidden>
+      <legend id="q-auto">Welches Auto fahren Sie?</legend>
+      <p class="step-n">Frage 2 von 3</p>
+      <input class="input" name="fahrzeug" aria-labelledby="q-auto" required minlength="2" maxlength="80" autocomplete="off" placeholder="z. B. VW Golf 8" enterkeyhint="next">
+      <div class="step-nav"><button type="button" class="btn btn-line" data-back>Zurück</button><button type="submit" class="btn btn-gold">Weiter</button></div>
+    </fieldset>
+    <fieldset data-step hidden>
+      <legend>Wie erreichen wir Sie?</legend>
+      <p class="step-n">Frage 3 von 3</p>
+      <label class="field"><span>Name</span><input class="input" name="name" autocomplete="name" required minlength="2" maxlength="80" enterkeyhint="next"></label>
+      <label class="field"><span>Handynummer (für WhatsApp)</span><input class="input num" name="telefon" type="tel" autocomplete="tel" required minlength="6" maxlength="30" enterkeyhint="next"></label>
+      <label class="field"><span>E-Mail</span><input class="input" name="email" type="email" autocomplete="email" required maxlength="120" enterkeyhint="send"></label>
+      <input class="sr" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="fine">Wir melden uns per WhatsApp, Telefon oder E-Mail. Mehr dazu im <a href="datenschutz.html#anfrage">Datenschutz</a>.</p>
+      <p class="form-error" role="alert" hidden><span></span> Oder schreiben Sie uns <a href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fahrzeugaufbereitung." target="_blank" rel="noopener">per WhatsApp</a>.</p>
+      <div class="step-nav"><button type="button" class="btn btn-line" data-back>Zurück</button><button type="submit" class="btn btn-gold">Anfrage senden</button></div>
+    </fieldset>
+    <div class="anfrage-done" data-step hidden>
+      <h3 tabindex="-1">Danke! Wir melden uns per WhatsApp.</h3>
+      <p class="muted">Meist noch am selben Tag. Sie wollen nicht warten? Schreiben Sie uns direkt.</p>
+      <a class="btn btn-gold" href="https://wa.me/4926849572269" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Auf WhatsApp schreiben</a>
+    </div>
+  </form>
+</dialog>
 
 <!-- Fenster zu den vier Kacheln -->
 <dialog class="sheet" id="sheet-aufbereitung" aria-labelledby="st-aufbereitung">

@@ -61,6 +61,8 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 
 **Bottom sheet** (`dialog.sheet`): native modal dialog, slides up from the bottom, max 90dvh, content scrolls inside. Head with title and close button, body with photo, one sentence, prices, fixed foot with "… anfragen" (WhatsApp, text pre-filled for that service) and a call button. Closes via the button, a tap on the backdrop, Esc or the back gesture. From 900px it is a centred window. A link like `index.html#sheet-folie` opens a sheet directly.
 
+**Inquiry sheet** (`#sheet-anfrage`): the same three questions as the Meta lead form plus e-mail, one per step ("Frage 1 von 3"). Step 1 is five large tap targets that advance on tap; the car is free text; then name, mobile number and e-mail with autofill. Selected answers get a gold border and dot. Opened by "Per Formular anfragen" (outline button in the hero and the contact section) or the direct link `#sheet-anfrage`. Answers are posted to the JD Vertrieb Apps Script and appear in the app like Meta leads.
+
 **Segmented control** (`.tablist`): "Pakete" / "Einzelleistungen" inside the Aufbereitung sheet. Selected segment is light with black text; arrow, Home and End keys work.
 
 **Package row** (`details.pkg`): Basic, Premium, Luxus and Exklusiv stand below each other with name, duration and price. Each row opens to show what it adds to the package before ("Alles aus Basic, dazu:"); Basic is open by default. There is no comparison table and nothing scrolls sideways (owner request after testing on the phone, 15 Nov 2026).

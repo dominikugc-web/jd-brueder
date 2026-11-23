@@ -147,7 +147,7 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .hero-text { position: relative; margin-top: -3.25rem; }
 .hero h1 { margin-bottom: .9rem; }
 .hero .lead { margin-bottom: 1.5rem; max-width: 36ch; }
-@media (max-width: 639px) { .hero .actions .btn { flex: 1 1 100%; } }
+@media (max-width: 639px) { .hero .actions .btn, .contact-grid .actions .btn { flex: 1 1 100%; } }
 /* Tablet: das breite Foto oben, Text darunter */
 @media (min-width: 640px) { .hero-media { aspect-ratio: 16 / 9; } }
 @media (min-width: 1100px) {
@@ -253,6 +253,43 @@ dialog.sheet::backdrop { background: rgb(0 0 0 / .72); }
   dialog.sheet[open]::backdrop { background: rgb(0 0 0 / .72); }
   @starting-style { dialog.sheet[open]::backdrop { background: rgb(0 0 0 / 0); } }
 }
+
+/* Anfrageformular: eine Frage pro Schritt, große Antwortflächen zum Antippen */
+.anfrage fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.anfrage legend, .anfrage-done h3 { padding: 0; font-size: 1.35rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.25; }
+.step-n { margin: .3rem 0 1.1rem; color: var(--text-2); font-size: .9rem; }
+.choices { display: grid; gap: .6rem; }
+.choice {
+  display: flex; align-items: center; gap: .85rem; min-height: 3.5rem; padding: .8rem 1.1rem;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--black);
+  font-weight: 500; cursor: pointer; transition: border-color .2s var(--ease);
+}
+.choice:hover, .choice:has(:checked) { border-color: var(--gold); }
+.choice input { appearance: none; flex: none; width: 1.25rem; height: 1.25rem; margin: 0; border: 1.5px solid var(--text-2); border-radius: 50%; display: grid; place-items: center; }
+.choice input::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: var(--gold); scale: 0; transition: scale .2s var(--ease); }
+.choice input:checked { border-color: var(--gold); }
+.choice input:checked::before { scale: 1; }
+.choice:has(:focus-visible) { outline: 2px solid var(--gold); outline-offset: 2px; }
+.choice input:focus-visible { outline: none; }
+.field { display: grid; gap: .35rem; margin-bottom: .9rem; }
+.field > span { color: var(--text-2); font-size: .9rem; }
+.input {
+  width: 100%; min-height: 3.25rem; padding: .75rem 1rem; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--black); color: var(--text); font: 400 1.0625rem/1.3 var(--sans);   /* ab 16px zoomt iOS nicht */
+}
+.input::placeholder { color: #77766f; }
+.input:focus { outline: none; border-color: var(--gold); }
+.step-nav { display: flex; gap: .6rem; margin-top: 1.25rem; }
+.step-nav .btn-gold { flex: 1; min-width: 0; }
+.step-nav-1 { display: none; }                         /* nur zurück auf Frage 1 mit schon gewählter Antwort */
+fieldset:has(:checked) > .step-nav-1 { display: flex; }
+.btn:disabled { opacity: .6; cursor: progress; }
+.fine { margin: .2rem 0 0; color: var(--text-2); font-size: .9rem; }
+.fine a, .form-error a { color: var(--text); }
+.form-error { margin: .9rem 0 0; padding: .75rem 1rem; border: 1px solid #e06c5a; border-radius: 12px; color: var(--text); font-size: .95rem; }
+.anfrage-done { padding-top: .5rem; }
+.anfrage-done h3:focus { outline: none; }
+.anfrage-done p { margin: .6rem 0 1.4rem; }
 
 /* Umschalter Pakete / Einzelleistungen */
 .tablist {
