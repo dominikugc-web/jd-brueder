@@ -50,12 +50,70 @@ menu?.addEventListener('click', (e) => {
 });
 
 // Vorher/Nachher-Regler
+const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.compare-frame').forEach((frame) => {
   const range = frame.querySelector('input[type="range"]');
   const set = () => frame.style.setProperty('--pos', range.value + '%');
-  range.addEventListener('input', set);
+  range.addEventListener('input', () => { frame.classList.add('is-used'); set(); });
   set();
+  // Einmal von selbst hin und her wischen, sobald der Regler zu sehen ist
+  if (ruhig || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return;
+    io.disconnect();
+    const punkte = [50, 82, 18, 50], dauer = 2400, t0 = performance.now();
+    const schritt = (t) => {
+      if (frame.classList.contains('is-used')) return;
+      const x = Math.min((t - t0) / dauer, 1), seg = Math.min(Math.floor(x * 3), 2), f = x * 3 - seg;
+      const weich = f < .5 ? 2 * f * f : 1 - (-2 * f + 2) ** 2 / 2;
+      range.value = punkte[seg] + (punkte[seg + 1] - punkte[seg]) * weich;
+      set();
+      if (x < 1) requestAnimationFrame(schritt);
+    };
+    setTimeout(() => requestAnimationFrame(schritt), 300);
+  }, { threshold: .6 });
+  io.observe(frame);
 });
+
+// So läuft's: das Bild bleibt stehen und wechselt mit dem Schritt, der gerade auf Höhe der Lesemarke ist
+document.querySelectorAll('[data-story]').forEach((story) => {
+  const bilder = [...story.querySelectorAll('.story-stage img')];
+  const schritte = [...story.querySelectorAll('.story-steps li')];
+  const nummer = story.querySelector('[data-story-n]');
+  const balken = story.querySelector('.story-bar');
+  story.classList.add('is-live');
+  bilder.forEach((b) => { b.loading = 'eager'; });
+  let aktiv = -1, wartet = false;
+  const zeige = () => {
+    wartet = false;
+    const marke = innerHeight * (innerWidth >= 900 ? .5 : .74);
+    let i = 0;
+    schritte.forEach((s, k) => { if (s.getBoundingClientRect().top < marke) i = k; });
+    const r = story.querySelector('.story-steps').getBoundingClientRect();
+    balken.style.setProperty('--p', Math.max(0, Math.min(1, (marke - r.top) / r.height)) * 100 + '%');
+    if (i === aktiv) return;
+    aktiv = i;
+    bilder.forEach((b, k) => b.classList.toggle('is-on', k === i));
+    schritte.forEach((s, k) => s.classList.toggle('is-on', k === i));
+    nummer.textContent = String(i + 1).padStart(2, '0');
+  };
+  addEventListener('scroll', () => { if (!wartet) { wartet = true; requestAnimationFrame(zeige); } }, { passive: true });
+  addEventListener('resize', zeige);
+  zeige();
+});
+
+// Abschnitte sanft einblenden, wenn sie ins Bild kommen
+if (!ruhig && 'IntersectionObserver' in window) {
+  const rein = new IntersectionObserver((eintraege) => eintraege.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('is-in'); rein.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.section-head, .tile, .work, .about > *, .faq-block, .contact-grid > *').forEach((el) => {
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    el.classList.add('rv');
+    if (el.matches('.tile')) el.style.setProperty('--d', [...el.parentNode.children].indexOf(el) * .08 + 's');
+    rein.observe(el);
+  });
+}
 
 // Galerie: Bild groß öffnen
 const box = document.querySelector('dialog.lightbox');

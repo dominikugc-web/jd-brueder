@@ -14,7 +14,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261124b">
+<link rel="stylesheet" href="style.css?v=20261124c">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -142,6 +142,7 @@ Regeln und Farben stehen in DESIGN.md.
             <span class="compare-tag before" aria-hidden="true">Vorher</span>
             <span class="compare-tag after-tag" aria-hidden="true">Nachher</span>
             <span class="compare-line" aria-hidden="true"></span>
+            <span class="compare-hint" aria-hidden="true">Ziehen</span>
             <span class="compare-knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
             <input type="range" min="0" max="100" value="50" aria-label="Vergleich verschieben: links vorher, rechts nachher">
           </div>
@@ -162,18 +163,33 @@ Regeln und Farben stehen in DESIGN.md.
     </div>
   </section>
 
-  <!-- So läuft's -->
+  <!-- So läuft's: beim Scrollen bleibt das Bild stehen und wechselt mit jedem Schritt -->
   <section id="ablauf" class="section" aria-labelledby="h-ablauf">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="h-ablauf">So läuft’s <span class="accent">in vier Schritten</span></h2>
+        <h2 id="h-ablauf">So läuft’s <span class="accent">vom Foto bis zum Glanz</span></h2>
+        <p class="lead">Scrollen Sie mit, am Beispiel einer Aufbereitung mit Politur.</p>
       </div>
-        <ol class="steps">
-          <li><h3>Fotos per WhatsApp schicken</h3><p>Ein paar Bilder vom Lack, vom Innenraum und von dem, was Sie stört.</p></li>
-          <li><h3>Preis einschätzen lassen</h3><p>Wir sagen Ihnen, welches Paket passt und was es ungefähr kostet.</p></li>
-          <li><h3>Abholen lassen oder vorbeibringen</h3><p>Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab. Die Kosten dafür nennen wir Ihnen bei der Anfrage. Oder Sie bringen es nach Puderbach.</p></li>
-          <li><h3>Sauber zurückbekommen</h3><p>Wir bringen Ihr Auto zurück, oder Sie holen es bei uns ab.</p></li>
+      <div class="story" data-story>
+        <div class="story-stage" aria-hidden="true">
+        <img src="img/w/hero-scheinwerfer.webp" alt="" style="object-position: 50% 50%" class="is-on" loading="lazy" decoding="async">
+        <img src="img/w/studio-jimny.webp" alt="" style="object-position: 50% 60%" loading="lazy" decoding="async">
+        <img src="img/w/felge-schaum.webp" alt="" style="object-position: 50% 45%" loading="lazy" decoding="async">
+        <img src="img/w/polieren-flex.webp" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async">
+        <img src="img/w/abperleffekt.webp" alt="" style="object-position: 50% 50%" loading="lazy" decoding="async">
+        <img src="img/w/trocknen-studio.webp" alt="" style="object-position: 50% 40%" loading="lazy" decoding="async">
+          <div class="story-count"><span class="story-count-n num" data-story-n>01</span><span class="num">/ 06</span></div>
+          <div class="story-bar"><span></span></div>
+        </div>
+        <ol class="story-steps">
+        <li><span class="story-no num">01</span><h3>Fotos schicken</h3><p>Ein paar Bilder per WhatsApp: Lack, Innenraum und was Sie stört. Wir sagen Ihnen, welches Paket passt und was es ungefähr kostet.</p></li>
+        <li><span class="story-no num">02</span><h3>Abholen oder vorbeibringen</h3><p>Auf Wunsch holen wir Ihr Auto zu Hause oder bei der Arbeit ab. Die Kosten dafür nennen wir Ihnen vorher. Dann kommt es unter unsere Wabenlampen.</p></li>
+        <li><span class="story-no num">03</span><h3>Gründlich waschen</h3><p>Schaum, Felgen, Radkästen: Erst lösen wir den Schmutz schonend, dann wird von Hand gewaschen.</p></li>
+        <li><span class="story-no num">04</span><h3>Polieren</h3><p>Die Politur nimmt Kratzer und Schleier aus dem Lack. Je nach Paket in einer oder mehreren Stufen.</p></li>
+        <li><span class="story-no num">05</span><h3>Versiegeln</h3><p>Zum Schluss schützt eine Versiegelung den Lack. Wasser perlt ab, der Glanz hält.</p></li>
+        <li><span class="story-no num">06</span><h3>Sauber zurückbekommen</h3><p>Wir bringen Ihr Auto zurück, oder Sie holen es bei uns ab.</p></li>
         </ol>
+      </div>
       <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20schicke%20Ihnen%20Fotos%20von%20meinem%20Auto." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Fotos per WhatsApp schicken</a>
     </div>
   </section>
@@ -577,6 +593,6 @@ Regeln und Farben stehen in DESIGN.md.
   <figure style="margin:0"></figure>
 </dialog>
 
-<script src="main.js?v=20261124b" defer></script>
+<script src="main.js?v=20261124c" defer></script>
 </body>
 </html>
