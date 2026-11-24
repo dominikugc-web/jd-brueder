@@ -146,6 +146,17 @@ p { margin: 0 0 1em; max-width: 62ch; }
 }
 .hero-text { position: relative; margin-top: -3.25rem; }
 .hero h1 { margin-bottom: .9rem; }
+/* Aktions-Hinweis über der Überschrift, öffnet sein Fenster */
+.promo {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; margin-bottom: 1rem;
+  padding: .3rem .95rem .3rem .3rem; border: 1px solid var(--gold); border-radius: 999px;
+  background: rgb(0 0 0 / .6); color: var(--text); font: 600 .95rem/1.2 var(--sans); cursor: pointer;
+  transition: background-color .2s var(--ease);
+}
+.promo:hover { background: var(--panel); }
+.promo-tag { padding: .4rem .7rem; border-radius: 999px; background: var(--gold); color: var(--black); font-weight: 700; }
+.promo svg { width: .9rem; height: .9rem; color: var(--gold); flex: none; }
+.sheet-body > .checks { margin-bottom: 1.1rem; }
 .hero .lead { margin-bottom: 1.5rem; max-width: 36ch; }
 @media (max-width: 639px) { .hero .actions .btn, .contact-grid .actions .btn { flex: 1 1 100%; } }
 /* Tablet: das breite Foto oben, Text darunter */

@@ -57,6 +57,8 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 
 **Hero**: phone: photo cropped to 10:9 with the car on the left and the workbench side on the right, the floor fading into black, headline overlapping the fade, two full-width buttons (WhatsApp in gold, "Leistungen und Preise" as outline). From 640px the full 16:9 photo sits on top. From 1100px the text stands left on black and the photo fills the right 64 %, shifted to show the workbench side and fading into black on its left edge. Images: `img/w/hero-halle-mobil.webp` (10:9) and `img/w/hero-halle.webp` (16:9).
 
+**Promo pill** (`button.promo`): one at most, above the h1 in the hero. Gold outline, a gold "20 %" tag and a chevron; it opens its own sheet (`#sheet-referenzauto`) with the conditions. A button with `data-interesse` opens the inquiry sheet with that answer already chosen. Only offers the owners have confirmed.
+
 **Service tile** (`button.tile`): fixed 2×2 grid on phones, 4×1 from 900px, ratio 4:5. Photo, dark gradient from the bottom, name, "ab" price in the gold accent face, a small plus badge as the tap cue. "Trockeneis" has no own photo and shows a gold ice crystal instead. A tap opens the matching sheet (`data-sheet`).
 
 **Bottom sheet** (`dialog.sheet`): native modal dialog, slides up from the bottom, max 90dvh, content scrolls inside. Head with title and close button, body with photo, one sentence, prices, fixed foot with "… anfragen" (WhatsApp, text pre-filled for that service) and a call button. Closes via the button, a tap on the backdrop, Esc or the back gesture. From 900px it is a centred window. A link like `index.html#sheet-folie` opens a sheet directly.

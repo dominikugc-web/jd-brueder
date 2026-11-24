@@ -23,8 +23,12 @@ tabs.forEach((tab, i) => {
 document.querySelectorAll('[data-sheet]').forEach((tile) => {
   tile.addEventListener('click', () => {
     const sheet = document.getElementById(tile.dataset.sheet);
+    tile.closest('dialog.sheet')?.close();
     sheet.showModal();
     sheet.querySelector('.sheet-body').scrollTop = 0;
+    // data-interesse wählt im Anfrageformular die passende Antwort schon aus (z. B. Referenzauto)
+    const wahl = tile.dataset.interesse && sheet.querySelector(`input[name="interesse"][value="${tile.dataset.interesse}"]`);
+    if (wahl) { wahl.checked = true; wahl.dispatchEvent(new Event('change', { bubbles: true })); }
   });
 });
 
