@@ -157,6 +157,21 @@ p { margin: 0 0 1em; max-width: 62ch; }
 .promo-tag { padding: .4rem .7rem; border-radius: 999px; background: var(--gold); color: var(--black); font-weight: 700; }
 .promo svg { width: .9rem; height: .9rem; color: var(--gold); flex: none; }
 .sheet-body > .checks { margin-bottom: 1.1rem; }
+/* Große Aktions-Karte rechts unten über dem Hallenfoto, nur am PC */
+.hero-promo { display: none; }
+@media (min-width: 1100px) {
+  .hero .promo { display: none; }
+  .hero-promo {
+    display: block; position: absolute; right: var(--gutter); bottom: 2.5rem; z-index: 1; width: 19rem;
+    padding: 1.4rem 1.5rem 1.5rem; border: 1px solid var(--line); border-radius: var(--radius);
+    background: rgb(0 0 0 / .66); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  }
+  .hero-promo p { margin: 0; }
+  .hero-promo-label { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); }
+  .hero-promo-num { font-family: var(--serif); font-style: italic; font-size: clamp(6rem, 8vw, 8.5rem); line-height: .9; color: var(--gold); margin-top: .3rem !important; }
+  .hero-promo-text { color: var(--text); margin: .4rem 0 1.1rem !important; }
+  .hero-promo-btn { min-height: 2.75rem; padding: .55rem 1.1rem; font-size: .95rem; }
+}
 .hero .lead { margin-bottom: 1.5rem; max-width: 36ch; }
 @media (max-width: 639px) { .hero .actions .btn, .contact-grid .actions .btn { flex: 1 1 100%; } }
 /* Tablet: das breite Foto oben, Text darunter */
