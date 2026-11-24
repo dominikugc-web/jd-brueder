@@ -192,6 +192,17 @@ if (rechner) {
   rechne();
 }
 
+// Sternenhimmel: verteilt funkelnde Punkte, jeder fünfte golden
+document.querySelectorAll('[data-sky]').forEach((himmel) => {
+  const zufall = (a, b) => a + Math.random() * (b - a);
+  for (let k = 0; k < Number(himmel.dataset.sky); k++) {
+    const stern = document.createElement('i');
+    stern.style.cssText = `--x:${zufall(0, 100)}%;--y:${zufall(0, 100)}%;--s:${zufall(1.4, 3.2).toFixed(1)}px;--t:${zufall(2, 5).toFixed(1)}s;--d:${zufall(-5, 0).toFixed(1)}s`
+      + (k % 5 === 0 ? ';--c:#d9c08a' : '');
+    himmel.prepend(stern);
+  }
+});
+
 // Abschnitte sanft einblenden, wenn sie ins Bild kommen
 if (!ruhig && 'IntersectionObserver' in window) {
   const rein = new IntersectionObserver((eintraege) => eintraege.forEach((e) => {
