@@ -13,6 +13,8 @@ Vor jeder gestalterischen Änderung `DESIGN.md` (Design-System) und `PRODUCT.md`
 
 Commit-Nachrichten auf Deutsch, kurz, was und warum.
 
+Wer `style.css` oder `main.js` ändert, zählt die Versionsnummer `?v=…` dahinter hoch (in `index.html`, `impressum.html`, `datenschutz.html`, `404.html`, überall gleich, Format Datum plus Buchstabe, z. B. `20261124b`). Sonst nutzen Browser bis zu 10 Minuten lang noch das alte Aussehen zum neuen Text.
+
 ## Inhalt
 
 - Kunden werden gesiezt. Ton: freundlich, bodenständig, ohne Übertreibung.
