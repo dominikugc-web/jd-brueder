@@ -75,6 +75,21 @@ document.querySelectorAll('.compare-frame').forEach((frame) => {
   io.observe(frame);
 });
 
+// Kopfbild-Film: nur wenn keine reduzierte Bewegung und kein Datensparmodus gewünscht ist
+const film = document.querySelector('.hero-video');
+if (film && !ruhig && !navigator.connection?.saveData) {
+  const knopf = document.querySelector('.hero-pause');
+  film.preload = 'auto';
+  film.addEventListener('playing', () => { film.classList.add('is-on'); knopf.hidden = false; });
+  film.play().catch(() => {});
+  knopf.addEventListener('click', () => {
+    const an = film.paused;
+    an ? film.play() : film.pause();
+    knopf.classList.toggle('is-paused', !an);
+    knopf.setAttribute('aria-label', an ? 'Video anhalten' : 'Video abspielen');
+  });
+}
+
 // So läuft's: das Bild bleibt stehen und wechselt mit dem Schritt, der gerade auf Höhe der Lesemarke ist
 document.querySelectorAll('[data-story]').forEach((story) => {
   const bilder = [...story.querySelectorAll('.story-stage img')];

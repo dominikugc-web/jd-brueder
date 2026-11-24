@@ -14,7 +14,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261124c">
+<link rel="stylesheet" href="style.css?v=20261124d">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,10 +65,17 @@ Regeln und Farben stehen in DESIGN.md.
 
   <!-- Erster Bildschirm -->
   <section class="hero" aria-labelledby="h1">
-    <picture class="hero-media">
-      <source media="(min-width: 640px)" srcset="img/w/hero-halle.webp" width="2000" height="1126">
-      <img src="img/w/hero-halle-mobil.webp" alt="Dunkelgrauer BMW M2 mit JD-Brüder-Schild in unserer Werkstatt in Puderbach, darüber die Wabenleuchten" width="1200" height="1080" fetchpriority="high">
-    </picture>
+    <div class="hero-media">
+      <picture>
+        <source media="(min-width: 640px)" srcset="img/w/hero-halle.webp" width="2000" height="1126">
+        <img src="img/w/hero-halle-mobil.webp" alt="Dunkelgrauer BMW M2 mit JD-Brüder-Schild in unserer Werkstatt in Puderbach, darüber die Wabenleuchten" width="1200" height="1080" fetchpriority="high">
+      </picture>
+      <!-- Kurzer Film vom M2 unter den Wabenlampen, ohne Ton. Startet per main.js, nicht bei „Bewegung reduzieren“ oder Datensparmodus. -->
+      <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+        <source src="video/hero-m2.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="hero-pause" hidden aria-label="Video anhalten"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path class="ico-pause" d="M4.5 3h2.2v10H4.5zM9.3 3h2.2v10H9.3z"/><path class="ico-play" d="M5 3l8 5-8 5z"/></svg></button>
+    </div>
     <div class="wrap hero-text">
       <button type="button" class="promo" data-sheet="sheet-referenzauto"><span class="promo-tag num">20 %</span>Referenzauto gesucht<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
       <h1 id="h1">Ihr Auto wie neu. <span class="accent">Wir holen es ab und bringen es zurück.</span></h1>
@@ -593,6 +600,6 @@ Regeln und Farben stehen in DESIGN.md.
   <figure style="margin:0"></figure>
 </dialog>
 
-<script src="main.js?v=20261124c" defer></script>
+<script src="main.js?v=20261124d" defer></script>
 </body>
 </html>
