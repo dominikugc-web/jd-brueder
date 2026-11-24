@@ -30,4 +30,4 @@ Commit-Nachrichten auf Deutsch, kurz, was und warum.
 
 ## Was hier nicht geht
 
-Domain und DNS (bei Wix), die App JD Vertrieb, Lexware und die Meta-Anzeigen liegen außerhalb dieses Repos. Das macht Dominik.
+Domain (bei INWX) und DNS (bei Cloudflare), die App JD Vertrieb, Lexware und die Meta-Anzeigen liegen außerhalb dieses Repos. Das macht Dominik.
