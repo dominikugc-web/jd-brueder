@@ -117,12 +117,87 @@ document.querySelectorAll('[data-story]').forEach((story) => {
   zeige();
 });
 
+// Preisrechner: Pakete und Preise kommen aus dem Fenster „Aufbereitung“, damit sie nur an einer Stelle gepflegt werden
+const rechner = document.querySelector('[data-calc]');
+if (rechner) {
+  const euro = (n) => 'ab ' + Math.round(n).toLocaleString('de-DE') + ' €';
+  const pakete = [...document.querySelectorAll('#sheet-aufbereitung details.pkg')].map((d) => ({
+    name: d.querySelector('.pkg-title').textContent.trim(),
+    preis: parseInt(d.querySelector('.pkg-price .accent').textContent.replace(/\D/g, ''), 10),
+    dazu: d.querySelector('.inherit')?.textContent.trim() || '',
+    inhalt: [...d.querySelectorAll('.pkg-body li')].map((li) => li.textContent.trim()),
+  })).filter((p) => p.preis && p.inhalt.length).sort((a, b) => a.preis - b.preis);
+  const liste = rechner.querySelector('[data-calc-pkgs]');
+  pakete.forEach((p, i) => {
+    const l = document.createElement('label');
+    l.className = 'calc-chip';
+    l.innerHTML = '<input type="radio" name="paket"><span></span>';
+    l.querySelector('input').value = i;
+    l.querySelector('input').checked = p.name === 'Basic';
+    // lange Namen am Handy mit Trennstrich umbrechen
+    l.querySelector('span').append(p.name.replace('Leasingrückläufer', 'Leasing­rückläufer'), Object.assign(document.createElement('small'), { textContent: euro(p.preis) }));
+    liste.append(l);
+  });
+  if (!liste.querySelector(':checked')) liste.querySelector('input').checked = true;
+  const extras = rechner.querySelector('[data-calc-extras]');
+  const preis = rechner.querySelector('[data-calc-price]');
+  const alt = rechner.querySelector('[data-calc-old]');
+  const hinweis = rechner.querySelector('[data-calc-note]');
+  const inhalt = rechner.querySelector('[data-calc-inc]');
+  const wa = rechner.querySelector('[data-calc-wa]');
+  let angezeigt = null, lauf = 0;
+  const zaehle = (ziel) => {
+    const von = angezeigt ?? ziel, t0 = performance.now(), id = ++lauf;
+    angezeigt = ziel;
+    if (ruhig || von === ziel) { preis.textContent = euro(ziel); return; }
+    const schritt = (t) => {
+      if (id !== lauf) return;
+      const x = Math.min((t - t0) / 450, 1);
+      preis.textContent = euro(von + (ziel - von) * (1 - (1 - x) ** 3));
+      if (x < 1) requestAnimationFrame(schritt);
+    };
+    requestAnimationFrame(schritt);
+  };
+  const rechne = () => {
+    const f = new FormData(rechner);
+    const p = pakete[f.get('paket')];
+    const gross = Number(f.get('groesse'));
+    const leasing = /leasing/i.test(p.name);
+    extras.hidden = !leasing;
+    const dazu = leasing ? [...rechner.querySelectorAll('[name="extra"]:checked')] : [];
+    const summe = p.preis + gross + dazu.reduce((s, e) => s + Number(e.value), 0);
+    const referenz = f.has('referenz');
+    const ende = referenz ? summe * .8 : summe;
+    alt.hidden = !referenz;
+    alt.textContent = euro(summe);
+    zaehle(ende);
+    hinweis.textContent = [
+      gross ? 'Für SUV, Van oder Bus kommen 50 bis 100 € dazu, hier mit 50 € gerechnet.' : '',
+      referenz ? 'Als Referenzauto dürfen wir Fotos und Videos von Ihrem Auto zeigen. Nur wenige Plätze.' : '',
+    ].filter(Boolean).join(' ');
+    inhalt.replaceChildren();
+    if (p.dazu) inhalt.append(Object.assign(document.createElement('p'), { textContent: p.dazu }));
+    const ul = document.createElement('ul');
+    p.inhalt.forEach((t) => ul.append(Object.assign(document.createElement('li'), { textContent: t })));
+    inhalt.append(ul);
+    const text = 'Hallo JD Brüder, ich interessiere mich für das Paket ' + p.name
+      + (gross ? ' für einen SUV, Van oder Bus' : '')
+      + (dazu.length ? ' mit ' + dazu.map((e) => e.dataset.name).join(', ') : '')
+      + (referenz ? ', gern als Referenzauto (20 %)' : '')
+      + '. Laut Preisrechner ' + euro(ende) + '. Ich schicke Ihnen gern Fotos.';
+    wa.href = 'https://wa.me/4926849572269?text=' + encodeURIComponent(text);
+  };
+  rechner.addEventListener('change', rechne);
+  rechner.addEventListener('submit', (e) => e.preventDefault());
+  rechne();
+}
+
 // Abschnitte sanft einblenden, wenn sie ins Bild kommen
 if (!ruhig && 'IntersectionObserver' in window) {
   const rein = new IntersectionObserver((eintraege) => eintraege.forEach((e) => {
     if (e.isIntersecting) { e.target.classList.add('is-in'); rein.unobserve(e.target); }
   }), { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.section-head, .tile, .work, .about > *, .faq-block, .contact-grid > *').forEach((el) => {
+  document.querySelectorAll('.section-head, .tile, .calc, .work, .about > *, .faq-block, .contact-grid > *').forEach((el) => {
     if (el.getBoundingClientRect().top < innerHeight) return;
     el.classList.add('rv');
     if (el.matches('.tile')) el.style.setProperty('--d', [...el.parentNode.children].indexOf(el) * .08 + 's');

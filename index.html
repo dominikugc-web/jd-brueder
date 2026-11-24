@@ -14,7 +14,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261124d">
+<link rel="stylesheet" href="style.css?v=20261124e">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -131,6 +131,48 @@ Regeln und Farben stehen in DESIGN.md.
           <span class="sr">, Details und Preise öffnen</span>
         </button>
       </div>
+    </div>
+  </section>
+
+  <!-- Preisrechner: die Paketpreise liest main.js aus dem Fenster „Aufbereitung“. Zusatzleistungen und Größen-Aufschlag stehen hier als value. -->
+  <section id="rechner" class="section" aria-labelledby="h-rechner">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="h-rechner">Was kostet’s <span class="accent">für Ihr Auto?</span></h2>
+        <p class="lead">Tippen Sie Auto und Paket an, dann sehen Sie den Richtpreis für die Aufbereitung.</p>
+      </div>
+      <form class="calc" data-calc>
+        <fieldset class="calc-group">
+          <legend>Ihr Auto</legend>
+          <div class="calc-seg">
+            <label class="calc-chip"><input type="radio" name="groesse" value="0" checked><span>Pkw</span></label>
+            <label class="calc-chip"><input type="radio" name="groesse" value="50"><span>SUV, Van oder Bus</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="calc-group">
+          <legend>Paket</legend>
+          <div class="calc-pkgs" data-calc-pkgs></div>
+        </fieldset>
+        <fieldset class="calc-group" data-calc-extras hidden>
+          <legend>Dazu buchen</legend>
+          <div class="calc-seg">
+            <label class="calc-chip"><input type="checkbox" name="extra" value="105" data-name="Lederreinigung"><span>Lederreinigung <small>+ 105 €</small></span></label>
+            <label class="calc-chip"><input type="checkbox" name="extra" value="135" data-name="Polsterreinigung"><span>Polsterreinigung <small>+ 135 €</small></span></label>
+            <label class="calc-chip"><input type="checkbox" name="extra" value="75" data-name="Hundehaare entfernen"><span>Hundehaare <small>+ 75 €</small></span></label>
+          </div>
+        </fieldset>
+        <label class="calc-switch"><input type="checkbox" name="referenz"><span>Als Referenzauto <strong>20 % sparen</strong></span></label>
+        <div class="calc-result" aria-live="polite">
+          <p class="calc-label">Richtpreis inkl. MwSt.</p>
+          <p class="calc-price"><s class="num" data-calc-old hidden></s><span class="num" data-calc-price>ab 440 €</span></p>
+          <p class="calc-note" data-calc-note></p>
+          <div class="calc-inc" data-calc-inc></div>
+          <div class="calc-actions">
+            <a class="btn btn-gold" data-calc-wa href="https://wa.me/4926849572269" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Mit diesem Paket anfragen</a>
+            <button type="button" class="btn btn-line" data-sheet="sheet-aufbereitung">Alle Preise</button>
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 
@@ -600,6 +642,6 @@ Regeln und Farben stehen in DESIGN.md.
   <figure style="margin:0"></figure>
 </dialog>
 
-<script src="main.js?v=20261124d" defer></script>
+<script src="main.js?v=20261124e" defer></script>
 </body>
 </html>

@@ -23,6 +23,10 @@ Wer `style.css` oder `main.js` ändert, zählt die Versionsnummer `?v=…` dahin
 - Der Geschäftsbereich „Montage“ kommt auf der Seite (noch) nicht vor.
 - Telefon, WhatsApp-Link und E-Mail stehen an mehreren Stellen (Kopf, Kopfbild, Fenster der Kacheln, Kontakt, runder WhatsApp-Knopf, Schema.org-Block in `index.html`, `impressum.html`, `datenschutz.html`). Bei Änderung überall gleich ändern.
 
+## Preise
+
+Preise stehen in den Fenstern der Kacheln, als „ab“-Preis auf den Kacheln und in der Beschreibung für Google („Pakete ab …“, `<meta name="description">`). Der Preisrechner (`#rechner`) liest die Paketpreise selbst aus dem Fenster „Aufbereitung“. Nur die Zusatzleistungen (Leder, Polster, Hundehaare) und der Aufschlag für SUV, Van oder Bus stehen im Rechner als `value` und müssen bei Änderung dort mit angepasst werden.
+
 ## Nicht anfassen ohne Rücksprache mit Dominik
 
 - `CNAME`: verbindet die Domain mit der Seite. Löschen oder ändern nimmt www.jd-brueder.de offline.

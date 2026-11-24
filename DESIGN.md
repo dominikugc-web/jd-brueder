@@ -65,6 +65,8 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 
 **Inquiry sheet** (`#sheet-anfrage`): the same three questions as the Meta lead form plus e-mail, one per step ("Frage 1 von 3"). Step 1 is five large tap targets that advance on tap; the car is free text; then name, mobile number and e-mail with autofill. Selected answers get a gold border and dot. Opened by "Per Formular anfragen" (outline button in the hero and the contact section) or the direct link `#sheet-anfrage`. Answers are posted to the JD Vertrieb Apps Script and appear in the app like Meta leads.
 
+**Price calculator** (`#rechner`, `form.calc`): one panel between the tiles and before/after. Car size (Pkw / SUV, Van oder Bus), package chips built from the Aufbereitung sheet (single source of prices), add-ons only for Leasingrückläufer, a switch for the 20 % Referenzauto offer. Result in the gold accent face, always "ab", counts up on change, old price struck through with the offer, contents of the package below, WhatsApp button with the choice pre-filled. Side by side from 900px.
+
 **Segmented control** (`.tablist`): "Pakete" / "Einzelleistungen" inside the Aufbereitung sheet. Selected segment is light with black text; arrow, Home and End keys work.
 
 **Package row** (`details.pkg`): Basic, Premium, Luxus and Exklusiv stand below each other with name, duration and price. Each row opens to show what it adds to the package before ("Alles aus Basic, dazu:"); Basic is open by default. There is no comparison table and nothing scrolls sideways (owner request after testing on the phone, 15 Nov 2026).
