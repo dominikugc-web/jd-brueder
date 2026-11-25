@@ -14,7 +14,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261125a">
+<link rel="stylesheet" href="style.css?v=20261125b">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -638,19 +638,52 @@ Regeln und Farben stehen in DESIGN.md.
     <h2 id="st-referenzauto">Referenzauto</h2>
     <button type="button" class="sheet-close" data-close aria-label="Schließen"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
   </div>
-  <div class="sheet-body">
-    <p class="lead">Wir suchen Autos, die wir zeigen dürfen. Dafür sparen Sie 20 %.</p>
+  <!-- Referenzauto in drei Schritten: Bereiche wählen, Leistungen wählen, Preis mit 20 % sehen und per WhatsApp schicken.
+       Die Leistungen und Preise liest main.js aus den anderen Fenstern, damit sie nur an einer Stelle stehen. -->
+  <form class="sheet-body ref" data-ref novalidate>
+    <div data-ref-step>
+      <p class="lead">Wir suchen Autos, die wir zeigen dürfen. Dafür sparen Sie 20 %.</p>
     <ul class="checks">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>20 % auf alle Leistungen: Aufbereitung, Folie und Veredelung</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Dafür dürfen wir Fotos und Videos von Ihrem Auto vorher und nachher auf unserer Website und in Social Media zeigen</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Ihr Kennzeichen ist darauf nicht lesbar</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Nur wenige Plätze</li>
     </ul>
-    <p class="muted">Fragen Sie einfach an, ob gerade ein Platz frei ist.</p>
-    <button type="button" class="btn btn-line" data-sheet="sheet-anfrage" data-interesse="referenzauto">Per Formular anfragen</button>
-  </div>
+      <p class="muted">Stellen Sie Ihren Wunsch in drei Schritten zusammen. Am Ende sehen Sie Ihren Preis mit 20 % weniger.</p>
+      <button type="button" class="btn btn-line" data-sheet="sheet-anfrage" data-interesse="referenzauto">Lieber per Formular anfragen</button>
+    </div>
+    <div data-ref-step hidden>
+      <p class="step-n">Schritt 1 von 3</p>
+      <h3 class="ref-q" tabindex="-1">Was wünschen Sie sich?</h3>
+      <p class="muted">Sie können mehrere Bereiche wählen.</p>
+      <div class="ref-kats">
+          <label class="calc-chip"><input type="checkbox" name="kat" value="aufbereitung"><span>Aufbereitung<small>Pakete und Einzelleistungen</small></span></label>
+          <label class="calc-chip"><input type="checkbox" name="kat" value="folie"><span>Folie<small>Teilfolie, Vollfolie, PPF</small></span></label>
+          <label class="calc-chip"><input type="checkbox" name="kat" value="veredelung"><span>Veredelung<small>Sternenhimmel, Ambiente und mehr</small></span></label>
+          <label class="calc-chip"><input type="checkbox" name="kat" value="eis"><span>Trockeneis<small>Preis auf Anfrage</small></span></label>
+      </div>
+    </div>
+    <div data-ref-step hidden>
+      <p class="step-n">Schritt 2 von 3</p>
+      <h3 class="ref-q" tabindex="-1">Was genau?</h3>
+      <div data-ref-items></div>
+    </div>
+    <div data-ref-step hidden>
+      <p class="step-n">Schritt 3 von 3</p>
+      <h3 class="ref-q" tabindex="-1">Ihr Preis als Referenzauto</h3>
+      <ul class="ref-sum" data-ref-sum></ul>
+      <div class="ref-total" aria-live="polite">
+        <p class="calc-label">Richtpreis inkl. MwSt.</p>
+        <p class="calc-price"><s class="num" data-ref-old></s><span class="num" data-ref-new></span></p>
+        <p class="calc-note" data-ref-note></p>
+      </div>
+      <label class="ref-auto"><span>Welches Auto fahren Sie? <small>(freiwillig)</small></span><input class="input" name="auto" autocomplete="off" placeholder="z. B. VW Golf 8"></label>
+    </div>
+  </form>
   <div class="sheet-foot">
-    <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Referenzauto-Aktion%20(20%20%25)." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Als Referenzauto anfragen</a>
+    <button type="button" class="btn btn-line" data-ref-back hidden>Zurück</button>
+    <button type="button" class="btn btn-gold" data-ref-next>Wunsch zusammenstellen<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+    <a class="btn btn-gold" data-ref-wa href="https://wa.me/4926849572269" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Anfrage senden</a>
     <a class="btn btn-line btn-icon" href="tel:+4926849572269" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg></a>
   </div>
 </dialog>
@@ -684,6 +717,6 @@ Regeln und Farben stehen in DESIGN.md.
   <figure style="margin:0"></figure>
 </dialog>
 
-<script src="main.js?v=20261125a" defer></script>
+<script src="main.js?v=20261125b" defer></script>
 </body>
 </html>

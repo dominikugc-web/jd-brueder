@@ -205,6 +205,155 @@ document.querySelectorAll('[data-sky]').forEach((himmel) => {
   }
 });
 
+// Referenzauto: drei Schritte, Leistungen und Preise kommen aus den Fenstern Aufbereitung, Folie und Veredelung
+const refForm = document.querySelector('[data-ref]');
+if (refForm) {
+  const fenster = refForm.closest('dialog');
+  const schritte = [...refForm.querySelectorAll('[data-ref-step]')];
+  const zurueck = fenster.querySelector('[data-ref-back]');
+  const weiter = fenster.querySelector('[data-ref-next]');
+  const waKnopf = fenster.querySelector('[data-ref-wa]');
+  const euroText = (n) => Math.round(n).toLocaleString('de-DE') + ' €';
+  const zahl = (t) => { const d = t.replace(/[^\d]/g, ''); return d ? Number(d) : null; };
+  const zeilen = (sel) => [...document.querySelectorAll(sel + ' tbody tr')].map((tr) => {
+    const th = tr.querySelector('th').cloneNode(true);
+    const klein = th.querySelector('small');
+    klein?.remove();
+    return { name: th.textContent.trim(), info: klein?.textContent.trim() || '', preis: zahl(tr.querySelector('td').textContent) };
+  });
+  const pakete = [...document.querySelectorAll('#sheet-aufbereitung details.pkg')].map((d) => ({
+    name: d.querySelector('.pkg-title').textContent.trim(), info: d.querySelector('.pkg-dur')?.textContent.trim() || '',
+    preis: zahl(d.querySelector('.pkg-price').textContent),
+  }));
+  const bereiche = {
+    aufbereitung: [
+      { titel: 'Paket', hinweis: 'eins wählen', eins: true, items: pakete, groesse: true },
+      { titel: 'Einzelleistungen', items: zeilen('#panel-einzeln') },
+    ],
+    folie: [
+      { titel: 'Teilfolie', items: zeilen('#panel-f-teil') },
+      { titel: 'Vollfolie', hinweis: 'eins wählen', eins: true, items: zeilen('#panel-f-voll') },
+      { titel: 'Lackschutzfolie (PPF)', items: zeilen('#panel-f-ppf') },
+    ],
+    veredelung: [{ titel: 'Veredelung', items: zeilen('#sheet-veredelung') }],
+    eis: [{ titel: 'Trockeneis', items: [{ name: 'Trockeneisreinigung', info: 'Wir sehen es uns an und nennen Ihnen den Preis', preis: null }] }],
+  };
+  const liste = refForm.querySelector('[data-ref-items]');
+  let gewaehlt = [];
+  const baueSchritt2 = () => {
+    const vorher = new Set([...liste.querySelectorAll(':checked')].map((i) => i.value));
+    liste.replaceChildren();
+    const kats = [...refForm.querySelectorAll('[name="kat"]:checked')].map((i) => i.value);
+    kats.forEach((k) => bereiche[k].forEach((g, gi) => {
+      const box = document.createElement('div');
+      box.className = 'ref-group';
+      const kopf = document.createElement('h4');
+      kopf.textContent = g.titel + ' ';
+      if (g.hinweis) kopf.append(Object.assign(document.createElement('small'), { textContent: '(' + g.hinweis + ')' }));
+      const ul = document.createElement('div');
+      ul.className = 'ref-list';
+      g.items.forEach((it, ii) => {
+        const id = `${k}-${gi}-${ii}`;
+        const l = document.createElement('label');
+        l.className = 'calc-chip';
+        l.innerHTML = '<input type="checkbox" name="item"><span><span><b></b><small></small></span><em></em></span>';
+        const inp = l.querySelector('input');
+        inp.value = id;
+        inp.checked = vorher.has(id);
+        if (g.eins) inp.dataset.eins = `${k}-${gi}`;
+        l.querySelector('b').textContent = it.name;
+        l.querySelector('small').textContent = it.info;
+        if (!it.info) l.querySelector('small').remove();
+        l.querySelector('em').textContent = it.preis ? 'ab ' + euroText(it.preis) : 'auf Anfrage';
+        ul.append(l);
+      });
+      box.append(kopf, ul);
+      if (g.groesse) {
+        const s = document.createElement('label');
+        s.className = 'calc-switch ref-size';
+        s.innerHTML = '<input type="checkbox" name="suv"><span>SUV, Van oder Bus <small>(+ 50 bis 100 € beim Paket)</small></span>';
+        s.querySelector('input').checked = refForm.dataset.suv === '1';
+        box.append(s);
+      }
+      liste.append(box);
+    }));
+  };
+  const lies = () => {
+    gewaehlt = [...liste.querySelectorAll('[name="item"]:checked')].map((i) => {
+      const [k, gi, ii] = i.value.split('-');
+      const g = bereiche[k][gi];
+      return { ...g.items[ii], paket: !!g.groesse };
+    });
+  };
+  const baueSchritt3 = () => {
+    lies();
+    const suv = !!liste.querySelector('[name="suv"]:checked') && gewaehlt.some((g) => g.paket);
+    const sum = refForm.querySelector('[data-ref-sum]');
+    sum.replaceChildren();
+    let summe = 0, offen = 0;
+    const zeile = (a, b) => {
+      const li = document.createElement('li');
+      li.append(Object.assign(document.createElement('span'), { textContent: a }), Object.assign(document.createElement('span'), { textContent: b }));
+      sum.append(li);
+    };
+    gewaehlt.forEach((g) => {
+      if (g.preis) summe += g.preis; else offen++;
+      zeile(g.name, g.preis ? 'ab ' + euroText(g.preis) : 'auf Anfrage');
+    });
+    if (suv) { summe += 50; zeile('Aufschlag SUV, Van oder Bus', 'ab 50 €'); }
+    const alt = refForm.querySelector('[data-ref-old]');
+    const neu = refForm.querySelector('[data-ref-new]');
+    alt.hidden = !summe;
+    alt.textContent = 'ab ' + euroText(summe);
+    neu.textContent = summe ? 'ab ' + euroText(summe * .8) : 'auf Anfrage';
+    refForm.querySelector('[data-ref-note]').textContent = (summe ? 'Mit 20 % Referenzauto-Rabatt. ' : '')
+      + (offen ? 'Leistungen „auf Anfrage“ sind nicht mitgerechnet. ' : '')
+      + 'Der genaue Preis hängt vom Zustand Ihres Autos ab. Nur wenige Plätze.';
+    refForm.dataset.summe = summe;
+    refForm.dataset.suv = suv ? '1' : '';
+    setzeWa();
+  };
+  const setzeWa = () => {
+    const summe = Number(refForm.dataset.summe || 0);
+    const auto = refForm.elements.auto.value.trim();
+    const text = 'Hallo JD Brüder, ich möchte mein Auto als Referenzauto anmelden (20 %).'
+      + (auto ? ' Mein Auto: ' + auto + (refForm.dataset.suv ? ' (SUV, Van oder Bus)' : '') + '.' : (refForm.dataset.suv ? ' Mein Auto ist ein SUV, Van oder Bus.' : ''))
+      + ' Mein Wunsch: ' + gewaehlt.map((g) => g.name + (g.preis ? ' (ab ' + euroText(g.preis) + ')' : ' (auf Anfrage)')).join(', ') + '.'
+      + (summe ? ' Laut Website zusammen ab ' + euroText(summe) + ', als Referenzauto ab ' + euroText(summe * .8) + '.' : '')
+      + ' Ist gerade ein Platz frei? Ich schicke Ihnen gern Fotos.';
+    waKnopf.href = 'https://wa.me/4926849572269?text=' + encodeURIComponent(text);
+  };
+  let at = 0;
+  const pruefe = () => {
+    weiter.disabled = (at === 1 && !refForm.querySelector('[name="kat"]:checked'))
+      || (at === 2 && !liste.querySelector('[name="item"]:checked'));
+  };
+  const zeige = (i) => {
+    if (i === 2 && at === 1) baueSchritt2();
+    if (i === 3) baueSchritt3();
+    at = i;
+    schritte.forEach((s, k) => { s.hidden = k !== i; });
+    zurueck.hidden = i === 0;
+    weiter.hidden = i === 3;
+    waKnopf.hidden = i !== 3;
+    weiter.firstChild.textContent = i === 0 ? 'Wunsch zusammenstellen' : 'Weiter';
+    refForm.scrollTop = 0;
+    if (i) schritte[i].querySelector('.ref-q')?.focus({ preventScroll: true });
+    pruefe();
+  };
+  refForm.addEventListener('change', (e) => {
+    const t = e.target;
+    if (t.dataset.eins && t.checked) liste.querySelectorAll(`[data-eins="${t.dataset.eins}"]`).forEach((o) => { if (o !== t) o.checked = false; });
+    pruefe();
+  });
+  refForm.addEventListener('input', (e) => { if (e.target.name === 'auto') setzeWa(); });
+  refForm.addEventListener('submit', (e) => e.preventDefault());
+  weiter.addEventListener('click', () => { if (!weiter.disabled) zeige(at + 1); });
+  zurueck.addEventListener('click', () => zeige(at - 1));
+  fenster.addEventListener('close', () => zeige(0));
+  zeige(0);
+}
+
 // Abschnitte sanft einblenden, wenn sie ins Bild kommen
 if (!ruhig && 'IntersectionObserver' in window) {
   const rein = new IntersectionObserver((eintraege) => eintraege.forEach((e) => {
