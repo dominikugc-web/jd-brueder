@@ -14,7 +14,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261124f">
+<link rel="stylesheet" href="style.css?v=20261125a">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,7 +113,7 @@ Regeln und Farben stehen in DESIGN.md.
           <img src="img/w/folieren-scheinwerfer-s.webp" alt="" loading="lazy">
           <span class="tile-more" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></span>
           <span class="tile-name">Folie</span>
-          <span class="tile-price num">ab 220 €</span>
+          <span class="tile-price num">ab 129 €</span>
           <span class="sr">, Details und Preise öffnen</span>
         </button>
         <button class="tile" type="button" data-sheet="sheet-veredelung">
@@ -548,16 +548,56 @@ Regeln und Farben stehen in DESIGN.md.
   </div>
   <div class="sheet-body">
     <img class="sheet-img" src="img/w/folieren-scheinwerfer-s.webp" alt="Folie wird von Hand an einem Scheinwerfer angelegt" width="675" height="900" loading="lazy">
-    <p class="lead">Scheibentönung, Voll- und Teilfolierung, Steinschlagschutz.</p>
-    <p class="muted">Richtpreise inkl. MwSt. Der genaue Preis hängt von Fahrzeug und Fläche ab.</p>
+    <p class="lead">Teil- und Vollfolierung, Lackschutz (PPF).</p>
+    <p class="muted">Richtpreise inkl. MwSt. Der genaue Preis hängt von Fahrzeug und Fläche ab. Schicken Sie uns gern Fotos.</p>
+    <div class="tabs">
+      <div class="tablist tablist-3" role="tablist" aria-label="Preise Folie">
+        <button type="button" role="tab" id="tab-f-teil" aria-selected="true" tabindex="0">Teilfolie</button>
+        <button type="button" role="tab" id="tab-f-voll" aria-selected="false" tabindex="-1">Vollfolie</button>
+        <button type="button" role="tab" id="tab-f-ppf" aria-selected="false" tabindex="-1">PPF</button>
+      </div>
+      <div class="panels">
+        <div role="tabpanel" aria-labelledby="tab-f-teil" id="panel-f-teil">
               <table class="pricetable num">
-                <caption>Folie</caption>
+                <caption>Teilfolierung</caption>
                 <tbody>
-                  <tr><th scope="row">Scheibentönung</th><td>ab 220 €</td></tr>
-                  <tr><th scope="row">Voll- und Teilfolierung</th><td>ab 260 €</td></tr>
-                  <tr><th scope="row">Steinschlagschutzfolie</th><td>ab 500 €</td></tr>
+                  <tr><th scope="row">Spiegelkappen<small>Paar</small></th><td>ab 129 €</td></tr>
+                  <tr><th scope="row">Dach</th><td>ab 349 €</td></tr>
+                  <tr><th scope="row">Motorhaube</th><td>ab 349 €</td></tr>
+                  <tr><th scope="row">Chrome Delete<small>Fensterleisten in Schwarz</small></th><td>ab 399 €</td></tr>
                 </tbody>
               </table>
+              <p class="price-note">Für größere Fahrzeuge und Sonderfolien wie Chrom oder Carbon-Optik kommt etwas dazu.</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="tab-f-voll" id="panel-f-voll" hidden>
+              <table class="pricetable num">
+                <caption>Vollfolierung</caption>
+                <tbody>
+                  <tr><th scope="row">Kleinwagen</th><td>ab 1.890 €</td></tr>
+                  <tr><th scope="row">Kompaktklasse</th><td>ab 2.290 €</td></tr>
+                  <tr><th scope="row">Mittel- und Oberklasse</th><td>ab 2.790 €</td></tr>
+                  <tr><th scope="row">SUV und Van</th><td>ab 3.290 €</td></tr>
+                  <tr><th scope="row">Transporter</th><td>ab 3.690 €</td></tr>
+                </tbody>
+              </table>
+              <p class="price-note">Farbwechsel für das ganze Auto. Chrom- und Effektfolien auf Anfrage.</p>
+        </div>
+        <div role="tabpanel" aria-labelledby="tab-f-ppf" id="panel-f-ppf" hidden>
+              <table class="pricetable num">
+                <caption>Lackschutzfolie (PPF)</caption>
+                <tbody>
+                  <tr><th scope="row">Ladekante</th><td>ab 199 €</td></tr>
+                  <tr><th scope="row">Scheinwerfer<small>Paar</small></th><td>ab 199 €</td></tr>
+                  <tr><th scope="row">Kleines Frontpaket<small>Stoßfänger, Motorhaube vorn, Kotflügelkanten, Spiegel</small></th><td>ab 1.090 €</td></tr>
+                  <tr><th scope="row">Full Front<small>Motorhaube und Kotflügel ganz, Stoßfänger, Spiegel, Scheinwerfer</small></th><td>ab 2.190 €</td></tr>
+                  <tr><th scope="row">Ganzes Auto, Klein- und Kompaktwagen</th><td>ab 4.990 €</td></tr>
+                  <tr><th scope="row">Ganzes Auto, Mittelklasse und SUV</th><td>ab 5.990 €</td></tr>
+                </tbody>
+              </table>
+              <p class="price-note">Durchsichtige Schutzfolie gegen Steinschläge, Kratzer und Insekten. Der Lack bleibt sichtbar.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="sheet-foot">
     <a class="btn btn-gold" href="https://wa.me/4926849572269?text=Hallo%20JD%20Br%C3%BCder%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Folierung." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.2c0 3 2.8 5.8 5.8 5.8l1-1.6-2-1-1 1c-1-.4-1.8-1.2-2.2-2.2l1-1-1-2z"/></svg>Folie anfragen</a>
@@ -644,6 +684,6 @@ Regeln und Farben stehen in DESIGN.md.
   <figure style="margin:0"></figure>
 </dialog>
 
-<script src="main.js?v=20261124f" defer></script>
+<script src="main.js?v=20261125a" defer></script>
 </body>
 </html>

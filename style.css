@@ -483,6 +483,9 @@ fieldset:has(:checked) > .step-nav-1 { display: flex; }
   color: var(--text-2); font: 600 .97rem var(--sans); cursor: pointer;
 }
 .tablist [role="tab"][aria-selected="true"] { background: var(--text); color: var(--black); }
+.tablist-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tablist-3 [role="tab"] { padding: 0 .4rem; }
+.pricetable th small { display: block; margin-top: .15rem; color: var(--text-2); font-size: .85rem; }
 .panels { display: grid; grid-template-columns: minmax(0, 1fr); }
 .panels > [role="tabpanel"] { grid-area: 1 / 1; min-width: 0; }
 

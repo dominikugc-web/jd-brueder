@@ -1,21 +1,23 @@
-// Umschalter Pakete / Einzelleistungen (Tabs mit Pfeiltasten)
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-function selectTab(tab, focus = false) {
-  for (const t of tabs) {
-    const on = t === tab;
-    t.setAttribute('aria-selected', on);
-    t.tabIndex = on ? 0 : -1;
-    document.querySelector(`[aria-labelledby="${t.id}"]`).hidden = !on;
-  }
-  if (focus) tab.focus();
-}
-tabs.forEach((tab, i) => {
-  tab.addEventListener('click', () => selectTab(tab));
-  tab.addEventListener('keydown', (e) => {
-    const map = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
-    if (!(e.key in map)) return;
-    e.preventDefault();
-    selectTab(tabs[(map[e.key] + tabs.length) % tabs.length], true);
+// Umschalter in den Fenstern (Pakete / Einzelleistungen, Folie-Arten), jeder für sich, mit Pfeiltasten
+document.querySelectorAll('[role="tablist"]').forEach((liste) => {
+  const tabs = [...liste.querySelectorAll('[role="tab"]')];
+  const selectTab = (tab, focus = false) => {
+    for (const t of tabs) {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.querySelector(`[aria-labelledby="${t.id}"]`).hidden = !on;
+    }
+    if (focus) tab.focus();
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', (e) => {
+      const map = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+      if (!(e.key in map)) return;
+      e.preventDefault();
+      selectTab(tabs[(map[e.key] + tabs.length) % tabs.length], true);
+    });
   });
 });
 
