@@ -71,6 +71,8 @@ This replaces the light "overview first" page (white and stone, prices in tabs).
 
 **Price calculator** (`#rechner`, `form.calc`): one panel between the tiles and before/after. Car size (Pkw / SUV, Van oder Bus), package chips built from the Aufbereitung sheet (single source of prices), add-ons only for Leasingrückläufer, a switch for the 20 % Referenzauto offer. Result in the gold accent face, always "ab", counts up on change, old price struck through with the offer, contents of the package below, WhatsApp button with the choice pre-filled. Side by side from 900px.
 
+**Vouchers** (`#gutscheine`): three equal cards in one row even on phones (pay 100/150/200 €, voucher worth 120/180/240 €), small gold "JD Brüder · Gutschein" label, the voucher value in the gold accent face, "Sie zahlen …" below. Ordered by phone only (no payment on the site), so the single action is a gold call button. Linked from the menu.
+
 **Segmented control** (`.tablist`): "Pakete" / "Einzelleistungen" inside the Aufbereitung sheet. Selected segment is light with black text; arrow, Home and End keys work.
 
 **Package row** (`details.pkg`): Basic, Premium, Luxus and Exklusiv stand below each other with name, duration and price. Each row opens to show what it adds to the package before ("Alles aus Basic, dazu:"); Basic is open by default. There is no comparison table and nothing scrolls sideways (owner request after testing on the phone, 15 Nov 2026).

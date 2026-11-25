@@ -404,6 +404,20 @@ dialog.sheet-sky .sheet-foot { background: rgb(0 0 0 / .88); }
 .sheet-foot .btn svg { width: 1.1rem; height: 1.1rem; }
 @media (min-width: 640px) { .ref-kats, .ref-list { grid-template-columns: 1fr 1fr; } }
 
+/* ---------- Gutscheine ---------- */
+.vouchers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; margin-bottom: 1.2rem; }
+.voucher {
+  display: grid; align-content: start; gap: .35rem; min-width: 0; padding: 1rem .8rem 1.1rem;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); text-align: center;
+}
+.voucher p { margin: 0; }
+.voucher-brand { display: grid; gap: .15rem; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.voucher-value { font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 8.5vw, 3.6rem); line-height: 1; color: var(--gold); }
+.voucher-pay { font-size: .88rem; color: var(--text-2); }
+.voucher-pay strong { color: var(--text); font-weight: 600; }
+.voucher-note { color: var(--text-2); margin: 0 0 1.2rem; }
+@media (min-width: 640px) { .vouchers { gap: 1rem; } .voucher { padding: 1.6rem 1.2rem; } .voucher-brand { display: block; font-size: .75rem; } .voucher-brand span + span::before { content: " · "; } .voucher-pay { font-size: 1rem; } }
+
 /* ---------- Fenster von unten (Details und Preise) ---------- */
 dialog.sheet {
   position: fixed; inset: auto 0 0; margin: 0 auto; width: 100%; max-width: 46rem; max-height: 90dvh;

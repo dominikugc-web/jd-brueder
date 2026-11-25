@@ -359,10 +359,10 @@ if (!ruhig && 'IntersectionObserver' in window) {
   const rein = new IntersectionObserver((eintraege) => eintraege.forEach((e) => {
     if (e.isIntersecting) { e.target.classList.add('is-in'); rein.unobserve(e.target); }
   }), { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.section-head, .tile, .calc, .work, .about > *, .faq-block, .contact-grid > *').forEach((el) => {
+  document.querySelectorAll('.section-head, .tile, .calc, .voucher, .work, .about > *, .faq-block, .contact-grid > *').forEach((el) => {
     if (el.getBoundingClientRect().top < innerHeight) return;
     el.classList.add('rv');
-    if (el.matches('.tile')) el.style.setProperty('--d', [...el.parentNode.children].indexOf(el) * .08 + 's');
+    if (el.matches('.tile, .voucher')) el.style.setProperty('--d', [...el.parentNode.children].indexOf(el) * .08 + 's');
     rein.observe(el);
   });
 }
